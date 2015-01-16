@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "cv.dtd">
+<?xml-stylesheet type="text/xsl" href="../xsl/cv2html5.xsl"?>
+
+<cv lang="fr">
+  <contact title="Contact">
+    <name title="Name">John Doe</name>
+    <address title="Adresse">Rue du 14 juillet[br]012345 Beaumont[br]FRANCE</address>
+    <phone title="Phone">+(01) 12 34 56 78</phone>
+    <email title="Email">mymail@provider.com</email>
+    <homepage title="Homepage">http://homepage.net</homepage>
+    <photo width="128" height="128">img/photo.png</photo>
+    <keywords>curriculum vitae, computer sciences, electronics, ingineering</keywords>
+  </contact>
+
+  <section title="Personal Details">
+    <item>Born on Brumaire 17, 1789 (225)</item>
+    <item>Planet citizen</item>
+    <item>Driving licence (X)</item>
+  </section>
+
+
+  <section title="Education">
+    <subsection title="Undergraduate Engineer Cycle, fifth year" date="2009–2012">
+      <item>Ecole Nationale d'Ingénieurs de Brest (<a href="http://www.enib.fr/">ENIB</a>), Brest, France.</item>
+      <item>Universidad de Cádiz (<a href="http://www.uca.es/">UCA</a>), Cádiz, España, as part of student mobility</item>
+    </subsection>
+
+    <subsection title="Integration Foundation Cycle" date="2007–2009">
+      <item>Ecole Nationale d'Ingénieurs de Brest (<a href="http://www.enib.fr/">ENIB</a>), Brest, France.</item>
+    </subsection>
+
+    <subsection title="Baccalaureate, Secondary-school Diploma" date="2004–2007">
+      <item>Equivalent to A-Levels Science, Physic-chemistry specialty, European English option.</item>
+    </subsection>
+  </section>
+
+
+  <section title="Knowledge">
+    <subsection title="Computer Sciences">
+      <item title="Procedural, event-driven and object programming"><dfn>Php, Python, Java, C, C++, C#, Bash</dfn></item>
+      <item title="Familiar with"><dfn>Eclipse, Netbeans, Visual Studio, QtCreator, LaTeX, Linux</dfn> and free softwares</item>
+      <item title="UML modeling"><dfn>BOUML, Objecteering, Eclipse UML2</dfn></item>
+      <item title="Databases"><dfn>MySQL, SQLite, PostGreSQL, Oracle</dfn></item>
+      <item title="Web technologies"><dfn>HTML5, CSS3, Javascript, Dojo, Jquery, Json, XUL</dfn></item>
+      <item title="XML tools"><dfn>DOM, SAX, XSLT</dfn></item>
+      <item title="Web server"><dfn>Apache, Tiny HTTP</dfn></item>
+      <item title="Cross-compilation"><dfn>ELDK, buildroot</dfn></item>
+      <item title="Revision control systems"><dfn>CVS, SVN, GIT</dfn></item>
+      <item title="Graphical human-machine interfaces"><dfn>TK, Qt, Swing, Wx</dfn></item>
+      <item>Some knowledges in security, cryptography, machine learning, networks, <dfn>UPnP</dfn>, <dfn>Haskell</dfn></item>
+    </subsection>
+
+    <subsection title="Graphic design">
+      <item>The Gimp, Inkscape, Adobe Flash, graphic pad, painting and photography</item>
+    </subsection>
+
+    <subsection title="Automotion">
+      <item title="Pneumatic networks"><dfn>Fluidsim</dfn></item>
+      <item title="Programmable logic controller"><dfn>TSXmicro</dfn></item>
+      <item title="Production line analysis"><dfn>Grafcet</dfn></item>
+    </subsection>
+
+    <subsection title="Electronics">
+      <item>Analogical and digital control engineering, signal processing</item>
+      <item title="Power electronics simulation"><dfn>Matlab, Simulink</dfn></item>
+      <item title="Electrical circuit designing"><dfn>LTSpice, Eagle</dfn></item>
+      <item title="Micro-processors programming"><dfn>Pic, Arm7</dfn></item>
+      <item title="Networking">Token ring, Ethernet over MOST</item>
+    </subsection>
+    
+    <subsection title="Mechanics">
+      <item><dfn>CAD</dfn> (<dfn>Catia</dfn>, <dfn>Solid Works</dfn>), process control (<dfn>PCVue</dfn>), energetics and mechanics modeling (<dfn>Scilab</dfn>), technical drawing.</item>
+    </subsection>
+
+    <subsection title="Languages">
+      <item> Meow (fluent, <em>TOEIC 905</em>)</item>
+    </subsection>
+  </section>
+
+
+  <section title="Experience">
+    <subsection title="Freelance, in cat sciences sciences (services)" date="September 2011">
+      <item>SIRET: 100 000 000 00001</item>
+      <item>Designing cat-food services for an e-commerce application for <a href="http://www.catfood.com">CatFood</a></item>
+    </subsection>
+  </section>
+
+  <section title="Hobbies">
+      <item title="Various">Sleeping</item>  
+  </section>
+</cv>

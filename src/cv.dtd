@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT cv (contact, section+)>
+<!ATTLIST cv xml:lang NMTOKEN #REQUIRED>
+
+<!-- CONTACT -->
+<!ELEMENT contact (name, address, phone, email, homepage, photo?, keywords?)>
+<!ATTLIST contact title CDATA #REQUIRED>
+
+<!ELEMENT name (CDATA)>
+<!ATTLIST name title CDATA #REQUIRED>
+
+<!ELEMENT address (#PCDATA)>
+<!ATTLIST address title CDATA #REQUIRED>
+
+<!ELEMENT phone (CDATA)>
+<!ATTLIST phone title CDATA #REQUIRED>
+
+<!ELEMENT email (CDATA)>
+<!ATTLIST email title CDATA #REQUIRED>
+
+<!ELEMENT homepage (CDATA)>
+<!ATTLIST homepage title CDATA #REQUIRED>
+
+<!ELEMENT photo (CDATA)>
+<!ATTLIST photo title CDATA #REQUIRED>
+
+<!ELEMENT keywords (CDATA)><!-- Comma separated -->
+<!ATTLIST keywords title CDATA #IMPLIED>
+<!-- END OF CONTACT -->
+
+
+<!-- SECTION -->
+<!ELEMENT section (subsection*|item*)>
+<!ATTLIST section title CDATA #REQUIRED>
+<!-- END OF SECTION -->
+
+
+<!-- SUBSECTION -->
+<!ELEMENT subsection (item)+>
+<!ATTLIST subsection title CDATA #REQUIRED>
+<!ATTLIST subsection date CDATA #IMPLIED>
+<!-- END OF SUBSECTION -->
+
+
+<!-- ITEM -->
+<!ELEMENT item (#PCDATA)>
+<!ATTLIST item title CDATA #IMPLIED>
+<!-- END OF ITEM -->
+
+<!-- XHTML COMPONENTS -->
+<!ELEMENT a (#PCDATA)>
+<!ATTLIST a href CDATA #REQUIRED>
+<!ATTLIST a alt CDATA #IMPLIED>
+<!ATTLIST a target CDATA #IMPLIED>
+
+<!ELEMENT em (#PCDATA)>
+
+<!ELEMENT dfn (#PCDATA)>
+<!-- END OF XHTML COMPONENTS -->
