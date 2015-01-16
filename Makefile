@@ -26,7 +26,7 @@ DIST_PDF=dist/pdf
 
 RM=rm -rf
 MKDIR=mkdir -p
-CP=cp -rf
+CP=cp -rfL
 
 LATEX=pdflatex
 XSLT=xsltproc
