@@ -1,6 +1,6 @@
 # CVlyzer
 
-Generates your CV out of simple xml syntax
+Generates your CV out of simple XML syntax
 
 ## Requirements
 
@@ -25,7 +25,7 @@ Magic happens, in your `./dest` file a surprise is waiting for you.
 
 ## Credits
 
-Thanks to Jason Blevins &lt;jrblevin@sdf.lonestar.org&gt; for its [LaTeX template](http://jblevins.org/projects/cv-template/).
+Thanks to Jason Blevins &lt;jrblevin@sdf.lonestar.org&gt; for his [LaTeX template](http://jblevins.org/projects/cv-template/).
 
 ## Licence
 
