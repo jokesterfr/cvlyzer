@@ -67,6 +67,7 @@ section {
   padding-left: 160px;
   border-top: 1px solid #333;
   padding-bottom: 15px;
+  min-height: 40px;
 }
 section#contact {
   padding-left: 10px;
