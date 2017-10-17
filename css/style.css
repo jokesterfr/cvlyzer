@@ -12,13 +12,19 @@ a {
 a:hover {
   text-decoration: underline;
 }
-  
+
 h1 {
   text-align: left;
   font-size: 1.4em;
   margin-left: 5px;
   margin-bottom: 0;
 }
+h1 > span {
+  font-size: 0.8em;
+  padding-left: 2em;
+  font-weight: normal;
+}
+
 h2 {
   font-size: 1.2em;
   font-weight: normal;
@@ -46,7 +52,7 @@ hr {
 }
 
 ul {
-  padding: 10px 20px 5px 0px;
+  padding: 0px 15px 5px 0px;
   list-style-type: none;
   margin-bottom: 0px;
 }
@@ -71,12 +77,11 @@ section {
 }
 section#contact {
   padding-left: 10px;
-  height: 90px;
 }
 section#contact img {
   float: right;
   position: relative;
-  top: -120px
+  top: -30px
 }
 #address {
   display: table;
@@ -137,7 +142,13 @@ header nav a:hover {
   text-decoration: none;
   text-shadow: 1px 1px 5px rgba(10,78,150,0.2);
 }
-  
+header nav.right {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: initial;
+}
+
 header nav ul {
    list-style-type: none;
    margin: 0;
@@ -148,6 +159,13 @@ header nav ul {
    border-bottom-right-radius: 10px;
    padding: 6px 3px 0px 3px;
 }
+
+  header nav.right ul {
+     border-left: 2px solid #ddd;
+     border-right: none;
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 0px;
+  }
 
 header nav li {
   display: table;
@@ -160,9 +178,21 @@ header nav li {
   header nav li:last-child {
     border: none;
   }
-  
+
 /* Footer */
 footer {
   text-align: center;
   margin-top: 30px;
+}
+.last-updated {
+  display: block;
+  padding-bottom: 2px;
+}
+
+.pdf-download {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AENCiQmO+ihwgAAAIxJREFUOMtjYKAD4GRgYPiPhjlxKWbCY9B/IsUIGkQSGDWIMGAkIP+fWPXYXKSPlG6wGfwfqoYoYIUlMcKwFaneLsNiSBkhTecZGBiOMDAw6KGJn0Ay5ASanB5Uz3lsfrfGYskjKEYH1shhyUKEFz2ICQd0g9gZGBg40MTuQWkOLGox0sV/StMj1VI2AKcmJmGj4TRVAAAAAElFTkSuQmCC');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding-left: 24px;
+  padding-top: 2px;
 }
