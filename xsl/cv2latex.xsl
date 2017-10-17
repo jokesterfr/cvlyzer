@@ -20,25 +20,26 @@
     \usepackage[T1]{fontenc}
     <xsl:choose>
       <xsl:when test="@lang = 'fr'">
-  \usepackage[frenchb]{babel}
-  \frenchbsetup{ReduceListSpacing=false,CompactItemize=false}
-  \def\lastupdated{Dernière mise à jour : \today}
+        \usepackage[frenchb]{babel}
+        \frenchbsetup{ReduceListSpacing=false,CompactItemize=false}
+        \def\lastupdated{Dernière mise à jour : \today}
       </xsl:when>
       <xsl:when test="@lang = 'es'">
-  \usepackage[english,spanish]{babel}
-  \def\lastupdated{Últimas actualización : \today}
+        \usepackage[english,spanish]{babel}
+        \def\lastupdated{Últimas actualización : \today}
       </xsl:when>
       <xsl:when test="@lang = 'it'">
-  \usepackage[italianb]{babel}
+        \usepackage[italianb]{babel}
       </xsl:when>
       <xsl:when test="@lang = 'de'">
-  \usepackage[germanb]{babel}
+        \usepackage[germanb]{babel}
       </xsl:when>
       <xsl:otherwise>
-  \usepackage[english]{babel}
-  \def\lastupdated{Last updated: \today}
+        \usepackage[english]{babel}
+        \def\lastupdated{Last updated: \today}
       </xsl:otherwise>
     </xsl:choose>
+
     \usepackage{textcomp}
     \DeclareUnicodeCharacter{B0}{\textdegree}
     \usepackage[usenames]{color}
@@ -46,6 +47,9 @@
     \usepackage{hyperref}
     \usepackage{geometry}
     \usepackage{wrapfig}
+
+    % Line height
+    \linespread{0.98}
 
     % Fonts
     \usepackage[T1]{fontenc}
@@ -79,9 +83,9 @@
     }
 
     \geometry{
-      body={6.5in, 8.5in},
-      left=1.0in,
-      top=1.0in
+      body={6.9in, 9in},
+      left=0.7in,
+      top=0.8in
     }
 
     % Customize page headers
@@ -111,45 +115,37 @@
     % Place name at left
     {\huge \name} {\hfill \large \title}
 
-    \vspace{0.25in}
-
     <xsl:for-each select="child::contact">
 
-      <!-- source: https://en.wikibooks.org/wiki/LaTeX/Picture -->
-      \begin{picture}(0,0)(80,80)
-        \put(469,10){\hbox{\includegraphics[width=80pt]{<xsl:value-of select="photo"/>}}}
-      \end{picture}
+      <xsl:if test="photo">
+        <!-- source: https://en.wikibooks.org/wiki/LaTeX/Picture -->
+        \begin{picture}(0,0)(80,80)
+         \put(504,5){\hbox{\includegraphics[width=80pt]{<xsl:value-of select="photo"/>}}}
+        \end{picture}
+      </xsl:if>
 
-      \begin{minipage}{0.45\linewidth}
-      <xsl:call-template name="string-replace-all">
-        <xsl:with-param name="text" select="address/text() | address/*" />
-      </xsl:call-template>
-      \end{minipage}
+      \begin{tabular}{ll}
+        <!-- Info -->
+        <xsl:value-of select="info/@title" />
+        <xsl:value-of select="info" />
+        \\
 
-      \begin{minipage}{0.45\linewidth}
-        \begin{tabular}{ll}
-          <!-- Info -->
-          <xsl:value-of select="info/@title" />
-          <xsl:value-of select="info" />
-          \\
+        <!-- Phone -->
+        <xsl:value-of select="phone/@title" />
+        <xsl:call-template name="getTwoDots" />
+        <xsl:value-of select="phone" />
+        \\
 
-          <!-- Phone -->
-          <xsl:value-of select="phone/@title" />
-          <xsl:call-template name="getTwoDots" />
-          <xsl:value-of select="phone" />
-          \\
+        <!-- Email -->
+        <xsl:value-of select="email/@title" />
+        <xsl:call-template name="getTwoDots" />
+        \href{mailto:<xsl:value-of select="email"/>}{\tt <xsl:value-of select="email"/>} \\
 
-          <!-- Email -->
-          <xsl:value-of select="email/@title" />
-          <xsl:call-template name="getTwoDots" />
-          \href{mailto:<xsl:value-of select="email"/>}{\tt <xsl:value-of select="email"/>} \\
-
-          <!-- Homepage -->
-          <xsl:value-of select="homepage/@title" />
-          <xsl:call-template name="getTwoDots" />
-          \href{mailto:<xsl:value-of select="homepage"/>}{\tt <xsl:value-of select="homepage"/>} \\
-        \end{tabular}
-      \end{minipage}
+        <!-- Homepage -->
+        <xsl:value-of select="homepage/@title" />
+        <xsl:call-template name="getTwoDots" />
+        \href{mailto:<xsl:value-of select="homepage"/>}{\tt <xsl:value-of select="homepage"/>} \\
+      \end{tabular}
 
     </xsl:for-each>
 
