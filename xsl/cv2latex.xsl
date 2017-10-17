@@ -20,32 +20,32 @@
     \usepackage[T1]{fontenc}
     <xsl:choose>
       <xsl:when test="@lang = 'fr'">
-	\usepackage[frenchb]{babel}
-	\frenchbsetup{ReduceListSpacing=false,CompactItemize=false} 
-	\def\lastupdated{Dernière mise à jour : \today}
+  \usepackage[frenchb]{babel}
+  \frenchbsetup{ReduceListSpacing=false,CompactItemize=false}
+  \def\lastupdated{Dernière mise à jour : \today}
       </xsl:when>
       <xsl:when test="@lang = 'es'">
-	\usepackage[english,spanish]{babel}
-	\def\lastupdated{Últimas actualización : \today}
+  \usepackage[english,spanish]{babel}
+  \def\lastupdated{Últimas actualización : \today}
       </xsl:when>
       <xsl:when test="@lang = 'it'">
-	\usepackage[italianb]{babel}
+  \usepackage[italianb]{babel}
       </xsl:when>
       <xsl:when test="@lang = 'de'">
-	\usepackage[germanb]{babel}
+  \usepackage[germanb]{babel}
       </xsl:when>
       <xsl:otherwise>
-	\usepackage[english]{babel}
-	\def\lastupdated{Last updated: \today}
+  \usepackage[english]{babel}
+  \def\lastupdated{Last updated: \today}
       </xsl:otherwise>
-    </xsl:choose> 
-    \usepackage{textcomp} 
+    </xsl:choose>
+    \usepackage{textcomp}
     \DeclareUnicodeCharacter{B0}{\textdegree}
     \usepackage[usenames]{color}
     \usepackage{graphicx}
-    \usepackage{wrapfig}
     \usepackage{hyperref}
     \usepackage{geometry}
+    \usepackage{wrapfig}
 
     % Fonts
     \usepackage[T1]{fontenc}
@@ -53,6 +53,9 @@
 
     % Set your name here
     \def\name{<xsl:value-of select="contact/name"/>}
+
+    % The job title
+    \def\title{<xsl:value-of select="contact/title"/>}
 
     \definecolor{myurlcolor}{rgb}{0,0.06,0.35}
 
@@ -97,7 +100,7 @@
     % Make lists without bullets
     \renewenvironment{itemize}{
       \begin{list}{}{
-	\setlength{\leftmargin}{1.5em}
+        \setlength{\leftmargin}{1.5em}
       }
     }{
       \end{list}
@@ -106,46 +109,58 @@
     \begin{document}
 
     % Place name at left
-    {\huge \name}
+    {\huge \name} {\hfill \large \title}
 
     \vspace{0.25in}
 
     <xsl:for-each select="child::contact">
+
+      <!-- source: https://en.wikibooks.org/wiki/LaTeX/Picture -->
+      \begin{picture}(0,0)(80,80)
+        \put(469,10){\hbox{\includegraphics[width=80pt]{<xsl:value-of select="photo"/>}}}
+      \end{picture}
+
       \begin{minipage}{0.45\linewidth}
       <xsl:call-template name="string-replace-all">
-	<xsl:with-param name="text" select="address/text() | address/*" />
+        <xsl:with-param name="text" select="address/text() | address/*" />
       </xsl:call-template>
       \end{minipage}
+
       \begin{minipage}{0.45\linewidth}
-	\begin{tabular}{ll}
-	  <xsl:for-each select="phone"><!-- only to change context -->
-	    <xsl:call-template name="EnTitling"/>
-	    <xsl:value-of select="."/>
-	  </xsl:for-each> \\
-	  <xsl:for-each select="email"><!-- only to change context -->
-	    <xsl:call-template name="EnTitling"/>
-	  </xsl:for-each>
-	  \href{mailto:<xsl:value-of select="email"/>}{\tt <xsl:value-of select="email"/>} \\
-	  <xsl:for-each select="homepage"><!-- only to change context -->
-	    <xsl:call-template name="EnTitling"/>
-	  </xsl:for-each>
-	  \href{mailto:<xsl:value-of select="homepage"/>}{\tt <xsl:value-of select="homepage"/>} \\
-	\end{tabular}
+        \begin{tabular}{ll}
+          <!-- Info -->
+          <xsl:value-of select="info/@title" />
+          <xsl:value-of select="info" />
+          \\
+
+          <!-- Phone -->
+          <xsl:value-of select="phone/@title" />
+          <xsl:call-template name="getTwoDots" />
+          <xsl:value-of select="phone" />
+          \\
+
+          <!-- Email -->
+          <xsl:value-of select="email/@title" />
+          <xsl:call-template name="getTwoDots" />
+          \href{mailto:<xsl:value-of select="email"/>}{\tt <xsl:value-of select="email"/>} \\
+
+          <!-- Homepage -->
+          <xsl:value-of select="homepage/@title" />
+          <xsl:call-template name="getTwoDots" />
+          \href{mailto:<xsl:value-of select="homepage"/>}{\tt <xsl:value-of select="homepage"/>} \\
+        \end{tabular}
       \end{minipage}
 
-      \begin{wrapfigure}[0]{r}{80pt}
-	\includegraphics[width=80pt]{<xsl:value-of select="photo"/>}
-      \end{wrapfigure}
     </xsl:for-each>
 
     <!-- Manage all sections -->
     <xsl:for-each select="child::section">
       \section*{<xsl:value-of select="@title"/>}
       \begin{itemize}
-	<xsl:if test="child::subsection">
-	  <xsl:call-template name="WithSubSection"/>
-	</xsl:if>
-	<xsl:call-template name="WithoutSubSection"/>
+      <xsl:if test="child::subsection">
+        <xsl:call-template name="WithSubSection"/>
+      </xsl:if>
+      <xsl:call-template name="WithoutSubSection"/>
       \end{itemize}
     </xsl:for-each>
 
@@ -155,8 +170,8 @@
     % Footer
     \begin{center}
       \begin{footnotesize}
-	\lastupdated \\
-	\href{\footerlink}{\texttt{\footerlink}}
+        \lastupdated \\
+        \href{\footerlink}{\texttt{\footerlink}}
       \end{footnotesize}
     \end{center}
 
@@ -165,27 +180,52 @@
 
   <!-- Template for content with subsection(s) -->
   <xsl:template name="WithSubSection">
-      <xsl:for-each select="subsection">
-	\item \textbf{<xsl:value-of select="@title"/> \hfill \em <xsl:value-of select="@date"/>}
-	\begin{itemize}<xsl:apply-templates select="item"/>\end{itemize}
-      </xsl:for-each>
-      <xsl:apply-templates select="item"/>
+    <xsl:for-each select="subsection">
+      \item \textbf{
+        <xsl:value-of select="@title"/> \hfill \em <xsl:value-of select="@date"/>
+      }
+      <xsl:choose>
+        <xsl:when test="@class='table'">
+          \begin{tabular}{ll}
+            \\[-0.75em]
+            <xsl:apply-templates select="item"/>
+          \end{tabular}
+        </xsl:when>
+        <xsl:otherwise>
+          \begin{itemize}
+            <xsl:apply-templates select="item"/>
+          \end{itemize}
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:for-each>
+    <xsl:apply-templates select="item"/>
   </xsl:template>
 
   <!-- Template for content without subsection -->
   <xsl:template name="WithoutSubSection">
-      <xsl:apply-templates select="item"/>
+    <xsl:apply-templates select="item"/>
   </xsl:template>
 
-  <!-- Template for items -->
+  <!-- Template for list items -->
   <xsl:template match="item">
-    \item <xsl:call-template name="EnTitling"/>
+    \item
     <xsl:copy>
-      <!--<xsl:copy-of select="@*" />-->
       <xsl:apply-templates />
     </xsl:copy>
   </xsl:template>
-  
+
+  <!-- Template for table items -->
+  <xsl:template match="item[../@class='table']">
+    <xsl:choose>
+      <xsl:when test="position() mod 2 = 0">
+        &#8226; <xsl:copy><xsl:apply-templates /></xsl:copy>\\[-0.75em] \\
+      </xsl:when>
+      <xsl:otherwise>
+        &#8226; <xsl:copy><xsl:apply-templates /></xsl:copy> &amp;
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
   <!-- Template for br -->
   <xsl:template match="br">
     <xsl:text>\\</xsl:text><xsl:apply-templates />
@@ -222,11 +262,8 @@
     </xsl:call-template>
   </xsl:template>
 
-  <!-- Template to display the title like "bla: " in english, either "bla : " -->
-  <xsl:template name="EnTitling">
-    <xsl:if test="./@title != ''">
-      <xsl:value-of select="./@title"/><xsl:if test="/cv/@lang!='en'"><xsl:text> </xsl:text></xsl:if>:<xsl:text> </xsl:text>
-    </xsl:if>
+  <xsl:template name="getTwoDots">
+    <xsl:if test="/cv/@lang!='en'"><xsl:text> </xsl:text></xsl:if>:<xsl:text> </xsl:text>
   </xsl:template>
 
  <xsl:template name="string-replace-all">
@@ -280,4 +317,4 @@
     </xsl:choose>
   </xsl:template>
 
-</xsl:stylesheet> 
+</xsl:stylesheet>
