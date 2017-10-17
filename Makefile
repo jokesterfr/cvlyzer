@@ -30,26 +30,43 @@ CP=cp -rfL
 
 LATEX=pdflatex
 XSLT=xsltproc
-PDFVIEWER=okular
-BROWSER=firefox
 
-all: en es fr
-	$(RM) $(DIST_PDF)/*.log && $(RM) $(DIST_PDF)/*.out && $(RM) $(DIST_PDF)/*.aux && $(RM) $(DIST_PDF)/*.tex
+AUTHOR=clement_desiles
+YEAR=`date +%Y`
+SUFFIX=_${AUTHOR}_${YEAR}
+
+# localize the current date
+date_en="`./getLocaleDate.js en`"
+date_fr="`./getLocaleDate.js fr`"
+date_es="`./getLocaleDate.js es`"
+date_de="`./getLocaleDate.js de`"
+date_it="`./getLocaleDate.js it`"
+
+all: en fr es it tidy
+	$(RM) $(DIST_PDF)/*.log && $(RM) $(DIST_PDF)/*.out && $(RM) $(DIST_PDF)/*.aux && $(RM) $(DIST_PDF)/*${SUFFIX}.tex
 
 en: $(DIST_PDF) $(DIST_HTML) update $(SRC)/cv_en.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
-	$(XSLT) $(XSL)/cv2latex.xsl $(SRC)/cv_en.xml > $(DIST_PDF)/cv_en.tex
-	$(LATEX) -output-directory=$(DIST_PDF) $(DIST_PDF)/cv_en.tex 
-	$(XSLT) $(XSL)/cv2html5.xsl $(SRC)/cv_en.xml > $(DIST_HTML)/cv_en.html
+	$(XSLT) -stringparam pubdate ${date_en} $(XSL)/cv2latex.xsl $(SRC)/cv_en.xml > $(DIST_PDF)/cv_en${SUFFIX}.tex
+	$(LATEX) -output-directory=$(DIST_PDF) $(DIST_PDF)/cv_en${SUFFIX}.tex
+	$(XSLT) -stringparam pubdate ${date_en} $(XSL)/cv2html5.xsl $(SRC)/cv_en.xml > $(DIST_HTML)/cv_en.html
 
 es: $(DIST_PDF) $(DIST_HTML) update $(SRC)/cv_es.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
-	$(XSLT) $(XSL)/cv2latex.xsl $(SRC)/cv_es.xml > $(DIST_PDF)/cv_es.tex
-	$(LATEX) -output-directory=$(DIST_PDF) $(DIST_PDF)/cv_es.tex 
-	$(XSLT) $(XSL)/cv2html5.xsl $(SRC)/cv_es.xml > $(DIST_HTML)/cv_es.html
+	$(XSLT) -stringparam pubdate ${date_es} $(XSL)/cv2latex.xsl $(SRC)/cv_es.xml > $(DIST_PDF)/cv_es${SUFFIX}.tex
+	$(LATEX) -output-directory=$(DIST_PDF) $(DIST_PDF)/cv_es${SUFFIX}.tex
+	$(XSLT) -stringparam pubdate ${date_es} $(XSL)/cv2html5.xsl $(SRC)/cv_es.xml > $(DIST_HTML)/cv_es.html
 
 fr: $(DIST_PDF) $(DIST_HTML) update $(SRC)/cv_fr.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
-	$(XSLT) $(XSL)/cv2latex.xsl $(SRC)/cv_fr.xml > $(DIST_PDF)/cv_fr.tex
-	$(LATEX) -output-directory=$(DIST_PDF) $(DIST_PDF)/cv_fr.tex 
-	$(XSLT) $(XSL)/cv2html5.xsl $(SRC)/cv_fr.xml > $(DIST_HTML)/cv_fr.html
+	$(XSLT) -stringparam pubdate ${date_fr} $(XSL)/cv2latex.xsl $(SRC)/cv_fr.xml > $(DIST_PDF)/cv_fr${SUFFIX}.tex
+	$(LATEX) -output-directory=$(DIST_PDF) $(DIST_PDF)/cv_fr${SUFFIX}.tex
+	$(XSLT) -stringparam pubdate ${date_fr} $(XSL)/cv2html5.xsl $(SRC)/cv_fr.xml > $(DIST_HTML)/cv_fr.html
+
+it: $(DIST_PDF) $(DIST_HTML) update $(SRC)/cv_it.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
+	$(XSLT) -stringparam pubdate ${date_it} $(XSL)/cv2latex.xsl $(SRC)/cv_it.xml > $(DIST_PDF)/cv_it${SUFFIX}.tex
+	$(LATEX) -output-directory=$(DIST_PDF) $(DIST_PDF)/cv_it${SUFFIX}.tex
+	$(XSLT) -stringparam pubdate ${date_it} $(XSL)/cv2html5.xsl $(SRC)/cv_it.xml > $(DIST_HTML)/cv_it.html
+
+tidy:
+	tidy -w 0 -q -m -i $(DIST_HTML)/*.html || true
 
 $(DIST_PDF):
 	$(MKDIR) $(DIST_PDF)
@@ -61,20 +78,20 @@ update:
 	$(CP) $(CSS)/ $(IMG)/ $(DIST_HTML)
 
 clean-log:
-	$(RM) $(DIST_PDF)/*.log && $(RM) $(DIST_PDF)/*.out && $(RM) $(DIST_PDF)/*.aux && $(DIST_PDF)/*.tex
+	$(RM) $(DIST_PDF)/*.log && $(RM) $(DIST_PDF)/*.out && $(RM) $(DIST_PDF)/*.aux && $(DIST_PDF)/*${SUFFIX}.tex
 
-clean:	
+clean:
 	$(RM) $(DIST_PDF)
 	$(RM) $(DIST_HTML)
 
 show-fr:
-	$(BROWSER) $(DIST_HTML)/cv_fr.html
-	$(PDFVIEWER) $(DIST_PDF)/cv_fr.pdf
+	xdg-open $(DIST_HTML)/cv_fr.html
+	xdg-open $(DIST_PDF)/cv_fr${SUFFIX}.pdf
 
 show-en:
-	$(BROWSER) $(DIST_HTML)/cv_en.html
-	$(PDFVIEWER) $(DIST_PDF)/cv_en.pdf
+	xdg-open $(DIST_HTML)/cv_en.html
+	xdg-open $(DIST_PDF)/cv_en${SUFFIX}.pdf
 
 show-es:
-	$(BROWSER) $(DIST_HTML)/cv_es.html
-	$(PDFVIEWER) $(DIST_PDF)/cv_es.pdf
+	xdg-open $(DIST_HTML)/cv_es.html
+	xdg-open $(DIST_PDF)/cv_es${SUFFIX}.pdf

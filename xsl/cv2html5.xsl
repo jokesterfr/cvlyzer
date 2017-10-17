@@ -2,6 +2,8 @@
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output doctype-system="about:legacy-compat" indent="yes" />
+  <xsl:param name="pubdate" select="YYYYMMDD" />
+
   <!-- Main template -->
   <xsl:template match="/cv">
     <html>
@@ -15,7 +17,7 @@
           </xsl:attribute>
         </meta>
         <title>Curriculum Vitae -
-          <xsl:value-of select="contact/name" />
+          <xsl:value-of select="contact/name" /> -
           <xsl:value-of select="contact/title" /> -
           <xsl:value-of select="@lang" />
         </title>
@@ -34,6 +36,7 @@
               <li><a href="cv_fr.html">en Français</a></li>
               <li><a href="cv_en.html">in English</a></li>
               <li><a href="cv_es.html">en Español</a></li>
+              <li><a href="cv_it.html">in Italiano</a></li>
             </ul>
           </nav>
           <nav class="right">
@@ -43,6 +46,7 @@
                   <xsl:attribute name="href">
                     <xsl:text>../pdf/cv_</xsl:text>
                     <xsl:value-of select="@lang" />
+                    <xsl:value-of select="@suffix" />
                     <xsl:text>.pdf</xsl:text>
                   </xsl:attribute>
                   Fichier PDF
@@ -52,9 +56,7 @@
           </nav>
           <h1>
             <xsl:value-of select="contact/name" />
-            <span>
-              <xsl:value-of select="contact/title" />
-            </span>
+            <span><xsl:value-of select="contact/title" /></span>
           </h1>
         </header>
         <!-- There is only one contact case, but it must be parsed differently -->
@@ -65,24 +67,30 @@
                 <xsl:with-param name="text" select="address/text() | address/*" />
               </xsl:call-template>
             </p>
-            <img>
-              <xsl:attribute name="src">
-                <xsl:value-of select="photo" />
-              </xsl:attribute>
-              <xsl:attribute name="width">
-                <xsl:value-of select="photo/@width" />
-              </xsl:attribute>
-              <xsl:attribute name="height">
-                <xsl:value-of select="photo/@height" />
-              </xsl:attribute>
-              <xsl:attribute name="alt">Photographie</xsl:attribute>
-            </img>
+
+            <xsl:if test="photo">
+              <img>
+                <xsl:attribute name="src">
+                  <xsl:value-of select="photo" />
+                </xsl:attribute>
+                <xsl:attribute name="width">
+                  <xsl:value-of select="photo/@width" />
+                </xsl:attribute>
+                <xsl:attribute name="height">
+                  <xsl:value-of select="photo/@height" />
+                </xsl:attribute>
+                <xsl:attribute name="alt">Photographie</xsl:attribute>
+              </img>
+            </xsl:if>
+
             <p>
-              <xsl:for-each select="info">
-                <xsl:call-template name="EnTitling" />
-                <xsl:value-of select="." />
-              </xsl:for-each>
-              <br />
+              <xsl:if test="info">
+                <xsl:for-each select="info">
+                  <xsl:call-template name="EnTitling" />
+                  <xsl:value-of select="." />
+                </xsl:for-each>
+                <br />
+              </xsl:if>
               <xsl:for-each select="phone">
                 <xsl:call-template name="EnTitling" />
                 <xsl:value-of select="." />
@@ -91,11 +99,7 @@
               <xsl:for-each select="email">
                 <xsl:call-template name="EnTitling" />
               </xsl:for-each>
-              <a>
-                <xsl:attribute name="href">mailto:
-                  <xsl:value-of select="email" />
-                </xsl:attribute>
-                <xsl:value-of select="email" />
+              <a><xsl:attribute name="href">mailto:<xsl:value-of select="email" /></xsl:attribute><xsl:value-of select="email" />
               </a>
               <br />
               <xsl:for-each select="homepage">
@@ -124,6 +128,14 @@
           </section>
         </xsl:for-each>
         <footer>
+          <span class="last-updated">
+            <xsl:if test="/cv/@lang='en'">Last updated: </xsl:if>
+            <xsl:if test="/cv/@lang='de'">Letzte Aktualisierung: </xsl:if>
+            <xsl:if test="/cv/@lang='it'">Ultimo aggiornamento: </xsl:if>
+            <xsl:if test="/cv/@lang='es'">Últimas actualización : </xsl:if>
+            <xsl:if test="/cv/@lang='fr'">Dernière mise à jour : </xsl:if>
+            <xsl:value-of select="$pubdate" />
+          </span>
           <a>
             <xsl:attribute name="href">
               <xsl:value-of select="/cv/contact/homepage" />
@@ -141,9 +153,7 @@
         <li>
           <h3>
             <xsl:value-of select="@title" />
-            <span class="right">
-              <xsl:value-of select="@date" />
-            </span>
+            <span class="right"><xsl:value-of select="@date" /></span>
           </h3>
           <xsl:apply-templates select="item" />
         </li>

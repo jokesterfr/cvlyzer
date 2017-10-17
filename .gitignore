@@ -2,3 +2,5 @@ missfont.log
 *~
 src_perso/
 dist/
+node_modules/
+*.log

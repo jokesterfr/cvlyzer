@@ -1,0 +1,22 @@
+{
+  "name": "cvlyzer",
+  "version": "1.0.0",
+  "description": "Generates your CV out of simple XML syntax",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jokesterfr/cvlyzer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jokesterfr/cvlyzer/issues"
+  },
+  "homepage": "https://github.com/jokesterfr/cvlyzer#readme",
+  "dependencies": {
+    "moment": "^2.19.1"
+  }
+}

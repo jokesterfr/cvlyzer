@@ -29,10 +29,12 @@
         \def\lastupdated{Últimas actualización : \today}
       </xsl:when>
       <xsl:when test="@lang = 'it'">
-        \usepackage[italianb]{babel}
+        \usepackage[italian]{babel}
+        \def\lastupdated{Ultimo aggiornamento: \today}
       </xsl:when>
       <xsl:when test="@lang = 'de'">
         \usepackage[germanb]{babel}
+        \def\lastupdated{Letzte Aktualisierung: \today}
       </xsl:when>
       <xsl:otherwise>
         \usepackage[english]{babel}
