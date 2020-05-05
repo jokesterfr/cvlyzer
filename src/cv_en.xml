@@ -2,91 +2,104 @@
 <!DOCTYPE cv SYSTEM "cv.dtd">
 <?xml-stylesheet type="text/xsl" href="../xsl/cv2html5.xsl"?>
 
-<cv lang="en">
+<cv lang="en" suffix="_clement_desiles_2020">
   <contact title="Contact">
-    <name title="Name">John Doe</name>
-    <address title="Adresse">Fleet Street, n°3[br]012345 London[br]UK</address>
-    <phone title="Phone">+(01) 12 34 56 78</phone>
-    <email title="Email">mymail@provider.com</email>
-    <homepage title="Homepage">http://homepage.net</homepage>
-    <photo width="128" height="128">img/photo.png</photo>
-    <keywords>curriculum vitae, computer sciences, electronics, ingineering</keywords>
+    <name title="Name">Clément Désiles</name>
+    <title>Presales engineer &amp; Node.js lead developer</title>
+    <info>31 - driving licence</info>
+    <phone>+33 6 58 12 45 61</phone>
+    <email>clementdesilesfr@gmail.com</email>
+    <homepage>https://clementdesiles.fr</homepage>
+    <photo width="128">img/photo.jpg</photo>
+    <keywords>curriculum vitae, pre-sales engineer, engineering, Node.js, full-stack, Linux, CI, CD, Ansible</keywords>
   </contact>
 
-  <section title="Personal Details">
-    <item>Born on Brumaire 17, 1789 (225)</item>
-    <item>Planet citizen</item>
-    <item>Driving licence (X)</item>
+  <section title="Work experience">
+    <subsection title="Presales Engineer, Hoppen (ex. Télécom Santé), Rennes" date="since June 2016 – 4 years">
+      <item>Presales: design and setup of demo kits, showrooms, answer calls to tenders, witness rooms, costings.</item>
+      <item>Export: technical support to international sales (Portugal, Switzerland, Quatar, Saudi Arabia...), answser to tenders, demos, deployments being Key Account Manager.</item>
+      <item>Lead dev: <dfn>Docker</dfn> packaging, migration of 800 <dfn>Gitlab</dfn> projects, CI/CD setups (<dfn>Gitlab Runners</dfn>, <dfn>Ansible</dfn>, <dfn>Artifactory</dfn>). <dfn>Jira</dfn> deployment for our 300 employees.</item>
+      <item>Interconnexion: medical records, medical imaging, meal ordering, invoicing, <dfn>CMMS</dfn>, <dfn>SSO</dfn>, home automation (<dfn>Siemens</dfn>, <dfn>KNX</dfn>).</item>
+      <item>Security: risk assessment, hardening, technology intelligence, payment and authentication systems.</item>
+      <item>Accessibility: POC of an HMI dedicated to disabled people with telethesis, eye tracking, and communication apps.</item>
+    </subsection>
+    <subsection title="Software architect, Revevol, Milan" date="May 2015 to May 2016 – 1 year">
+      <item>International intranet of 60,000 users for Lagarge-Holcim: devops of a <dfn>Google App Engine</dfn> application.</item>
+      <item>Airliquide's datacenter archives migration to the cloud: design of a distributed web app (US/Europe) with <dfn>MongoDB shards</dfn>, hosted on the <dfn>GCP</dfn>.</item>
+      <item>IT tool to manage Solvay's mobile devices: developement of a web app to grant accesses to Google services from a pool of 30,000 devices in the company's domain (<dfn>Apps for Work</dfn>).</item>
+    </subsection>
+    <subsection title="Full-stack developer, Télécom Santé, Rennes" date="September 2012 to April 2015 – 3 years and 6 months">
+      <item>Software development: lead developer of a micro-services platform for healthcare institutions. Webapps with responsive design and i18n, legacy code migration.</item>
+      <item>Management: project coordination, training and skills transfer.</item>
+      <item>Process and quality: analysis, specifications, system integration, tests, packaging.</item>
+      <item>System: touchscreen devices support under <dfn>Linux</dfn>, <dfn>reverse engineering</dfn>, <dfn>C</dfn> bindings to <dfn>Node.js</dfn>.</item>
+    </subsection>
+    <subsection title="Engineer internship, Télécom Santé, Rennes" date="February 2012 to August 2012 – 6 months">
+      <item>At the very begining of a promising startup (2 founders, one senior developer and me), entire setup of a touchscreen device dedicated to patients in hospitals.</item>
+      <item><dfn>Linux</dfn> support, <dfn>Vanilla JS</dfn> Web applications and <dfn>Node.js (v0.6)</dfn> backends.</item>
+    </subsection>
+    <subsection title="Freelance, software development" date="September 2011 to August 2012 – 1 year">
+      <item>Realization of an e-commerce platform for <dfn>WorldGift</dfn>.</item>
+    </subsection>
+    <subsection title="Internship, Telemotive headquarters, Munich" date="June 2010 to December 2010 – 6 months">
+      <item>At the heart of the automotive industry, development of <dfn>UPnP</dfn> services on embeded <dfn>Linux</dfn>/<dfn>PowerPC</dfn> log boards. Studies of <dfn>Ethernet</dfn> frames encapsulation within a <dfn>MOST</dfn> network (optic fiber). Performance analysis with (<dfn>Python</dfn>).</item>
+    </subsection>
+    <subsection title="Webmaster Assistant, PMB Services" date="June 2007 to June 2010 – 3 years">
+      <item>Contributions to a library management software in <dfn>PHP</dfn>/<dfn>MySQL</dfn>, design of custom interfaces for customers portals, development of the <a href="https://www.sigb.net">company's website</a> with the <dfn>SPIP</dfn> framework.</item>
+    </subsection>
   </section>
-
 
   <section title="Education">
-    <subsection title="Undergraduate Engineer Cycle, fifth year" date="2009–2012">
-      <item>Ecole Nationale d'Ingénieurs de Brest (<a href="http://www.enib.fr/">ENIB</a>), Brest, France.</item>
-      <item>Universidad de Cádiz (<a href="http://www.uca.es/">UCA</a>), Cádiz, España, as part of student mobility</item>
+    <subsection title="Master’s Degree, Engineering Degree" date="2007–2012">
+      <item>Top french engineers school of Brest (<a href="https://www.enib.fr">ENIB</a>), France</item>
     </subsection>
-
-    <subsection title="Integration Foundation Cycle" date="2007–2009">
-      <item>Ecole Nationale d'Ingénieurs de Brest (<a href="http://www.enib.fr/">ENIB</a>), Brest, France.</item>
-    </subsection>
-
-    <subsection title="Baccalaureate, Secondary-school Diploma" date="2004–2007">
-      <item>Equivalent to A-Levels Science, Physic-chemistry specialty, European English option.</item>
+    <subsection title="Student mobility in Spain" date="2012">
+      <item>University of Cadiz (<a href="http://www.uca.es/">UCA</a>), Spain</item>
     </subsection>
   </section>
 
-
-  <section title="Knowledge">
+  <section title="Languages and skills">
     <subsection title="Computer Sciences">
-      <item title="Procedural, event-driven and object programming"><dfn>Php, Python, Java, C, C++, C#, Bash</dfn></item>
-      <item title="Familiar with"><dfn>Eclipse, Netbeans, Visual Studio, QtCreator, LaTeX, Linux</dfn> and free softwares</item>
-      <item title="UML modeling"><dfn>BOUML, Objecteering, Eclipse UML2</dfn></item>
-      <item title="Databases"><dfn>MySQL, SQLite, PostGreSQL, Oracle</dfn></item>
-      <item title="Web technologies"><dfn>HTML5, CSS3, Javascript, Dojo, Jquery, Json, XUL</dfn></item>
-      <item title="XML tools"><dfn>DOM, SAX, XSLT</dfn></item>
-      <item title="Web server"><dfn>Apache, Tiny HTTP</dfn></item>
-      <item title="Cross-compilation"><dfn>ELDK, buildroot</dfn></item>
-      <item title="Revision control systems"><dfn>CVS, SVN, GIT</dfn></item>
-      <item title="Graphical human-machine interfaces"><dfn>TK, Qt, Swing, Wx</dfn></item>
-      <item>Some knowledges in security, cryptography, machine learning, networks, <dfn>UPnP</dfn>, <dfn>Haskell</dfn></item>
+      <item>Languages: <dfn>Node.js, Python, C, C++, bash</dfn></item>
+      <item>Adminsys: <dfn>Ubuntu, Archlinux, LFS, Ansible, systemd</dfn></item>
+      <item>Databases: <dfn>MongoDB, MySQL, PostGreSQL</dfn></item>
+      <item>Virtualization: <dfn>VMWare / VSphere, Virtualbox, Qemu</dfn></item>
+      <item>Revision control: I fully master <dfn>GIT</dfn> (experience of being integrator)</item>
     </subsection>
 
-    <subsection title="Graphic design">
-      <item>The Gimp, Inkscape, Adobe Flash, graphic pad, painting and photography</item>
+    <subsection title="Web">
+      <item>Technologies: <dfn>Javascript ES6, HTML5, CSS3, Websocket, WebRTC</dfn></item>
+      <item>Frameworks: <dfn>VueJS, AngularJS, PolymerJS</dfn></item>
+      <item>Packaging and testing: <dfn>Docker, npm, mocha, ava, ajv, ESLint/xo</dfn></item>
+      <item>Servers: <dfn>Nginx, Apache, ExpressJS, Django</dfn></item>
     </subsection>
 
-    <subsection title="Automotion">
-      <item title="Pneumatic networks"><dfn>Fluidsim</dfn></item>
-      <item title="Programmable logic controller"><dfn>TSXmicro</dfn></item>
-      <item title="Production line analysis"><dfn>Grafcet</dfn></item>
+    <subsection title="Networking and platforms">
+      <item>Networking: <dfn>VLAN, Wi-Fi, load-balancer, routing, sharding</dfn></item>
+      <item>Services: <dfn>DHCP, proxy, reverse-proxy, SSH, VPN</dfn></item>
+      <item>Protocols: <dfn>HTTP, SSL/TLS, HLS, DNS, PC/SC</dfn></item>
+      <item>Cloud: <dfn>GCP, OVH Cloud, Azure</dfn></item>
     </subsection>
 
-    <subsection title="Electronics">
-      <item>Analogical and digital control engineering, signal processing</item>
-      <item title="Power electronics simulation"><dfn>Matlab, Simulink</dfn></item>
-      <item title="Electrical circuit designing"><dfn>LTSpice, Eagle</dfn></item>
-      <item title="Micro-processors programming"><dfn>Pic, Arm7</dfn></item>
-      <item title="Networking">Token ring, Ethernet over MOST</item>
-    </subsection>
-    
-    <subsection title="Mechanics">
-      <item><dfn>CAD</dfn> (<dfn>Catia</dfn>, <dfn>Solid Works</dfn>), process control (<dfn>PCVue</dfn>), energetics and mechanics modeling (<dfn>Scilab</dfn>), technical drawing.</item>
+    <subsection title="Presales">
+      <item>Tender answers, defense, presentation and training.</item>
+      <item>Demo kits design &amp; setup, multi-product internationalized showrooms.</item>
+      <item>Specific client customization, budget and project management.</item>
+      <item>International <dfn>Key Account Manager</dfn>, deploys, L3 support.</item>
     </subsection>
 
-    <subsection title="Languages">
-      <item> Meow (fluent, <em>TOEIC 905</em>)</item>
-    </subsection>
-  </section>
-
-
-  <section title="Experience">
-    <subsection title="Freelance, in cat sciences sciences (services)" date="September 2011">
-      <item>SIRET: 100 000 000 00001</item>
-      <item>Designing cat-food services for an e-commerce application for <a href="http://www.catfood.com">CatFood</a></item>
+    <subsection title="Languages" class="table">
+      <item>French (native)</item>
+      <item>English (fluent, TOEIC 905)</item>
+      <item>Italian (fluent, work in Italy)</item>
+      <item>Spanish (intermediate, studies in Spain)</item>
+      <item>German (basics, internship in Germany)</item>
     </subsection>
   </section>
 
   <section title="Hobbies">
-      <item title="Various">Sleeping</item>  
+    <item>🧳 I've been participating to intercultural workcamps (Brittany, Bosnia-Herzegovina, Serbia, Germany), I did inter-rail travels and I'm an active member of <a href="https://www.couchsurfing.com/people/clementdesiles">CouchSurfing</a>.</item>
+    <item>🎵 I've played the piano since the age of 6, the irish tin whistle, I'm now learning the violin.</item>
+    <item>🧗 I practice ultimate frisbee, I also do kayak and climbing. I love to cook (delicious) open-source lasagna.</item>
   </section>
 </cv>

@@ -83,35 +83,40 @@
               </img>
             </xsl:if>
 
-            <p>
+            <p class="info">
               <xsl:if test="info">
+                <span class="details">
                 <xsl:for-each select="info">
                   <xsl:call-template name="EnTitling" />
                   <xsl:value-of select="." />
                 </xsl:for-each>
-                <br />
+                </span>
               </xsl:if>
               <xsl:for-each select="phone">
-                <xsl:call-template name="EnTitling" />
-                <xsl:value-of select="." />
+                <span class="phone">
+                  <xsl:call-template name="EnTitling" />
+                  <xsl:value-of select="." />
+                </span>
               </xsl:for-each>
-              <br />
               <xsl:for-each select="email">
                 <xsl:call-template name="EnTitling" />
               </xsl:for-each>
-              <a><xsl:attribute name="href">mailto:<xsl:value-of select="email" /></xsl:attribute><xsl:value-of select="email" />
-              </a>
-              <br />
+              <span class="email">
+                <a><xsl:attribute name="href">mailto:<xsl:value-of select="email" /></xsl:attribute><xsl:value-of select="email" />
+                </a>
+              </span>
               <xsl:for-each select="homepage">
                 <!-- only to change context -->
                 <xsl:call-template name="EnTitling" />
               </xsl:for-each>
-              <a>
-                <xsl:attribute name="href">
+              <span class="homepage">
+                <a>
+                  <xsl:attribute name="href">
+                    <xsl:value-of select="homepage" />
+                  </xsl:attribute>
                   <xsl:value-of select="homepage" />
-                </xsl:attribute>
-                <xsl:value-of select="homepage" />
-              </a>
+                </a>
+              </span>
             </p>
           </section>
         </xsl:for-each>

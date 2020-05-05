@@ -2,91 +2,103 @@
 <!DOCTYPE cv SYSTEM "cv.dtd">
 <?xml-stylesheet type="text/xsl" href="../xsl/cv2html5.xsl"?>
 
-<cv lang="fr">
+<cv lang="fr" suffix="_clement_desiles_2020">
   <contact title="Contact">
-    <name title="Name">John Doe</name>
-    <address title="Adresse">Rue du 14 juillet[br]012345 Beaumont[br]FRANCE</address>
-    <phone title="Phone">+(01) 12 34 56 78</phone>
-    <email title="Email">mymail@provider.com</email>
-    <homepage title="Homepage">http://homepage.net</homepage>
-    <photo width="128" height="128">img/photo.png</photo>
-    <keywords>curriculum vitae, computer sciences, electronics, ingineering</keywords>
+    <name title="Name">Clément Désiles</name>
+    <title>Ingénieur avant-vente &amp; Lead developer Node.js</title>
+    <info>31 ans – permis de conduire B</info>
+    <phone>+33 6 58 12 45 61</phone>
+    <email>clementdesilesfr@gmail.com</email>
+    <homepage>https://clementdesiles.fr</homepage>
+    <photo width="128">img/photo.jpg</photo>
+    <keywords>curriculum vitae, pre-sales engineer, engineering, Node.js, full-stack, Linux, CI, CD, Ansible</keywords>
   </contact>
 
-  <section title="Personal Details">
-    <item>Born on Brumaire 17, 1789 (225)</item>
-    <item>Planet citizen</item>
-    <item>Driving licence (X)</item>
-  </section>
-
-
-  <section title="Education">
-    <subsection title="Undergraduate Engineer Cycle, fifth year" date="2009–2012">
-      <item>Ecole Nationale d'Ingénieurs de Brest (<a href="http://www.enib.fr/">ENIB</a>), Brest, France.</item>
-      <item>Universidad de Cádiz (<a href="http://www.uca.es/">UCA</a>), Cádiz, España, as part of student mobility</item>
+  <section title="Formation">
+    <subsection title="Diplôme d’ingénieur, grade de Master" date="2007–2012">
+      <item>Ecole Nationale d’Ingénieurs de Brest (<a href="https://www.enib.fr">ENIB</a>), France</item>
     </subsection>
-
-    <subsection title="Integration Foundation Cycle" date="2007–2009">
-      <item>Ecole Nationale d'Ingénieurs de Brest (<a href="http://www.enib.fr/">ENIB</a>), Brest, France.</item>
-    </subsection>
-
-    <subsection title="Baccalaureate, Secondary-school Diploma" date="2004–2007">
-      <item>Equivalent to A-Levels Science, Physic-chemistry specialty, European English option.</item>
+    <subsection title="Semestre de mobilité à l’étranger" date="2012">
+      <item>Université de Cadix (<a href="https://www.uca.es">UCA</a>), Espagne</item>
     </subsection>
   </section>
 
-
-  <section title="Knowledge">
-    <subsection title="Computer Sciences">
-      <item title="Procedural, event-driven and object programming"><dfn>Php, Python, Java, C, C++, C#, Bash</dfn></item>
-      <item title="Familiar with"><dfn>Eclipse, Netbeans, Visual Studio, QtCreator, LaTeX, Linux</dfn> and free softwares</item>
-      <item title="UML modeling"><dfn>BOUML, Objecteering, Eclipse UML2</dfn></item>
-      <item title="Databases"><dfn>MySQL, SQLite, PostGreSQL, Oracle</dfn></item>
-      <item title="Web technologies"><dfn>HTML5, CSS3, Javascript, Dojo, Jquery, Json, XUL</dfn></item>
-      <item title="XML tools"><dfn>DOM, SAX, XSLT</dfn></item>
-      <item title="Web server"><dfn>Apache, Tiny HTTP</dfn></item>
-      <item title="Cross-compilation"><dfn>ELDK, buildroot</dfn></item>
-      <item title="Revision control systems"><dfn>CVS, SVN, GIT</dfn></item>
-      <item title="Graphical human-machine interfaces"><dfn>TK, Qt, Swing, Wx</dfn></item>
-      <item>Some knowledges in security, cryptography, machine learning, networks, <dfn>UPnP</dfn>, <dfn>Haskell</dfn></item>
+  <section title="Expérience">
+    <subsection title="Ingénieur avant-vente, Hoppen (ex. Télécom Santé)" date="depuis juin 2016 – 4 ans">
+      <item>Avant-vente : mise en place de kits de démonstration, showroom, réponse à appel d'offre, chambres témoin, réalisation de devis.</item>
+      <item>Export : accompagnement à l’international (Portugal, Suisse, Quatar, Arabie Saoudite, Antilles), réponse aux appels d’offre, démos, <dfn>KAM</dfn> et déploiement.</item>
+      <item>Lead dev : packaging <dfn>Docker</dfn>, migration de 800 sources logicielles <dfn>Gitlab</dfn>, mise en place de CI/CD (<dfn>Gitlab Runners</dfn>, <dfn>Ansible</dfn>, <dfn>Artifactory</dfn>). Déploiement de <dfn>Jira</dfn> pour nos 300 employés.</item>
+      <item>Interconnexion : dossiers médicaux, radiographies, commande de repas, facturation, <dfn>GMAO</dfn>, <dfn>SSO</dfn>, domotique (<dfn>Siemens</dfn>, <dfn>KNX</dfn>).</item>
+      <item>Sécurité : analyse de risque, hardening, veille, systèmes de paiement et d’authentification.</item>
+      <item>Handicap : POC d'IHM à destination des personnes handicapées mentales et physique (contacteur sec, balayage au souffle, contrôle rétinien).</item>
     </subsection>
-
-    <subsection title="Graphic design">
-      <item>The Gimp, Inkscape, Adobe Flash, graphic pad, painting and photography</item>
+    <subsection title="VIE Architecte développeur, Revevol Milan" date="mai 2015 à mai 2016 – 1 an">
+      <item>Intranet international de 60 000 utilisateurs pour Lafarge-Holcim : devops d’une application <dfn>Google App Engine</dfn>.</item>
+      <item>Migration des archives d'Airliquide dans le Cloud : développement d'application web distribuée (US / Europe) sharding <dfn>MongoDB</dfn> dans la <dfn>GCP</dfn>.</item>
+      <item>Outil IT de gestion de mobiles pour Solvay : application Web de gestion d'accès pour les 30 000 smartphones connectés au domaine de l’entreprise (<dfn>Apps for Work</dfn>).</item>
     </subsection>
-
-    <subsection title="Automotion">
-      <item title="Pneumatic networks"><dfn>Fluidsim</dfn></item>
-      <item title="Programmable logic controller"><dfn>TSXmicro</dfn></item>
-      <item title="Production line analysis"><dfn>Grafcet</dfn></item>
+    <subsection title="Développeur full stack, Télécom Santé" date="septembre 2012 à avril 2015 – 3 ans et 6 mois">
+      <item>Développeur : architecture d'applications web tactiles, <dfn>responsive design</dfn>, i18n, migration de code legacy.</item>
+      <item>Encadrement : formation et suivi de stagiaires, transfert de compétences, coordination de projet.</item>
+      <item>Conception : analyse, cahier des charges, spécifications logicielles, intégration, tests, packaging.</item>
+      <item>Système : support de tablettes tactiles sous <dfn>Linux</dfn>, <dfn>reverse engineering</dfn>, écriture de drivers, bindings <dfn>C</dfn>/<dfn>Node.js</dfn>.</item>
     </subsection>
-
-    <subsection title="Electronics">
-      <item>Analogical and digital control engineering, signal processing</item>
-      <item title="Power electronics simulation"><dfn>Matlab, Simulink</dfn></item>
-      <item title="Electrical circuit designing"><dfn>LTSpice, Eagle</dfn></item>
-      <item title="Micro-processors programming"><dfn>Pic, Arm7</dfn></item>
-      <item title="Networking">Token ring, Ethernet over MOST</item>
+    <subsection title="Stage ingénieur, Télécom Santé" date="de février 2012 à août 2012 – 6 mois">
+      <item>Au sein d'une jeune startup (2 fondateurs, un dev senior et moi-même), développement d'une tablette à destination des patients hospitalisés. Support <dfn>Linux</dfn>, développement d’applications <dfn>Web</dfn> et <dfn>Node.js v0.6</dfn>.</item>
     </subsection>
-    
-    <subsection title="Mechanics">
-      <item><dfn>CAD</dfn> (<dfn>Catia</dfn>, <dfn>Solid Works</dfn>), process control (<dfn>PCVue</dfn>), energetics and mechanics modeling (<dfn>Scilab</dfn>), technical drawing.</item>
+    <subsection title="Auto-entrepreneur, développement logiciel" date="de septembre 2011 à août 2012 – 1 an">
+      <item>Réalisation d’une plate-forme <dfn>e-Commerce</dfn> pour le site <a href="https://worldgift.com">WorldGift</a>.</item>
     </subsection>
-
-    <subsection title="Languages">
-      <item> Meow (fluent, <em>TOEIC 905</em>)</item>
+    <subsection title="Stage, Telemotive, Munich" date="de juin 2010 à décembre 2010 – 6 mois">
+      <item>Au coeur de l'industrie automobile, développement de services <dfn>UPnP</dfn> sur des cartes embarquées <dfn>Linux</dfn> / <dfn>PowerPC</dfn>. Études d'encapsulation de trames <dfn>Ethernet</dfn> dans un réseau fibre optique <dfn>MOST</dfn>. Analyse de performances (<dfn>Python</dfn>).</item>
+    </subsection>
+    <subsection title="Assistant Webmaster, PMB Services" date="de juin 2007 à juin 2010 – 3 ans">
+      <item>Contributions à un logiciel de gestion de bibliothèque en <dfn>PHP</dfn> / <dfn>MySQL</dfn>, réalisation de chartes graphiques, d’interfaces Web et du <a href="https://www.sigb.net">site internet</a> de la société avec le framework <dfn>SPIP</dfn>.</item>
     </subsection>
   </section>
 
+  <section title="Compétences">
+    <subsection title="Informatique générale">
+      <item>Langages : <dfn>Node.js, Python, C, C++, bash</dfn></item>
+      <item>Administration système : <dfn>Ubuntu, Archlinux, LFS, Ansible, systemd</dfn></item>
+      <item>Bases de données : <dfn>MongoDB, MySQL, PostGreSQL</dfn></item>
+      <item>Virtualisation : <dfn>VMWare / VSphere, Virtualbox, Qemu</dfn></item>
+      <item>CI / CD : <dfn>Ansible, Gitlab ci/runners, Artifactory, docker-compose</dfn></item>
+      <item>Gestion de versions : je maîtrise parfaitement <dfn>GIT</dfn> (intégrateur logiciel)</item>
+    </subsection>
 
-  <section title="Experience">
-    <subsection title="Freelance, in cat sciences sciences (services)" date="September 2011">
-      <item>SIRET: 100 000 000 00001</item>
-      <item>Designing cat-food services for an e-commerce application for <a href="http://www.catfood.com">CatFood</a></item>
+    <subsection title="Web">
+      <item>Technologies : <dfn>Javascript ES6, HTML5, CSS3, Websocket, WebRTC</dfn></item>
+      <item>Frameworks : <dfn>VueJS, AngularJS, PolymerJS</dfn></item>
+      <item>Packaging et tests : <dfn>Docker, npm, mocha, ava, ajv, ESLint/xo</dfn></item>
+      <item>Serveurs : <dfn>Nginx, Apache, ExpressJS, Django</dfn></item>
+    </subsection>
+
+    <subsection title="Réseau et plateformes">
+      <item>Réseau : <dfn>VLAN, Wi-Fi, Load Balancer, routage, sharding</dfn></item>
+      <item>Services : <dfn>DHCP, proxy, reverse-proxy, SSH, VPN</dfn></item>
+      <item>Protocoles : <dfn>HTTP, SSL/TLS, HLS, DNS, PC/SC</dfn></item>
+      <item>Cloud : <dfn>GCP, OVH Cloud, Azure</dfn></item>
+    </subsection>
+
+    <subsection title="Avant-vente">
+      <item>Réponse à appel d'offre, soutenances, présentations et formations.</item>
+      <item>Réalisation de kits de démonstration, showrooms multi-produit et multi-lingue.</item>
+      <item>Adaptations clientes spécifiques, gestion de budget, gestion de projet.</item>
+      <item><dfn>Key Account Manager</dfn> à l'international, déploiements, support N3.</item>
+    </subsection>
+
+    <subsection title="Langues" class="table">
+      <item>Anglais (courant, TOEIC 905)</item>
+      <item>Italien (courant, emploi en Italie)</item>
+      <item>Espagnol (intermédiaire, études en Espagne)</item>
+      <item>Allemand (débutant, stage en Allemagne)</item>
     </subsection>
   </section>
 
-  <section title="Hobbies">
-      <item title="Various">Sleeping</item>  
+  <section title="Loisirs">
+    <item>🧳 rencontres interculturelles (Bretagne, Bosnie-Herzégovine, Serbie, Allemagne), voyages en inter-rail, membre actif de la communauté <a href="https://www.couchsurfing.com/people/clementdesiles">CouchSurfing</a>.</item>
+    <item>🎵 passionné de concerts et de festivals de musique, je joue du piano depuis mes 6 ans, de la flûte irlandaise et j’apprends le violon.</item>
+    <item>🧗 je pratique l’ultimate frisbee, et suis amateur d’escalade et de kayak. J’adore cuisiner de (délicieuses) lasagnes open source.</item>
   </section>
 </cv>

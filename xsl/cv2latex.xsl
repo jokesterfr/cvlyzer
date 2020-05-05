@@ -14,14 +14,19 @@
     % required in any resulting documents. I do ask that you please leave
     % this notice and the above URL in the source code if you choose to
     % redistribute this file.
+    %
+    % Copyright (C) 2012-2020 Clément Désiles &lt;clementdesilesfr@gmail.com&gt;
+    % https://github.com/jokesterfr/cvlyzer
+    % For my rework licensed under MIT.
 
     \documentclass[letterpaper]{article}
-    \usepackage[utf8]{inputenc}
-    \usepackage[T1]{fontenc}
+    \usepackage[utf8x]{inputenc}
+    \usepackage{fontspec}
+    \setmainfont{Liberation Sans}
     <xsl:choose>
       <xsl:when test="@lang = 'fr'">
-        \usepackage[frenchb]{babel}
-        \frenchbsetup{ReduceListSpacing=false,CompactItemize=false}
+        \usepackage[french]{babel}
+        \frenchsetup{ReduceListSpacing=false,CompactItemize=false}
         \def\lastupdated{Dernière mise à jour : \today}
       </xsl:when>
       <xsl:when test="@lang = 'es'">
@@ -42,8 +47,24 @@
       </xsl:otherwise>
     </xsl:choose>
 
+    % Emoji handling
+    \usepackage{newunicodechar}
+    \newunicodechar{📧}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/e-mail-symbol_1f4e7.png}}}}
+    \newunicodechar{📞}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/telephone-receiver_1f4de.png}}}}
+    \newunicodechar{🌐}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/globe-with-meridians_1f310.png}}}}
+
+    \newunicodechar{💰}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/money-bag_1f4b0.png}}}}
+    \newunicodechar{🌍}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/earth-globe-europe-africa_1f30d.png}}}}
+    \newunicodechar{📐}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/triangular-ruler_1f4d0.png}}}}
+    \newunicodechar{🔗}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/link-symbol_1f517.png}}}}
+    \newunicodechar{🔐}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/closed-lock-with-key_1f510.png}}}}
+    \newunicodechar{♿}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/wheelchair-symbol_267f.png}}}}
+
+    \newunicodechar{🧗}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/person-climbing_1f9d7.png}}}}
+    \newunicodechar{🎵}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/musical-note_1f3b5.png}}}}
+    \newunicodechar{🧳}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/luggage_1f9f3.png}}}}
+
     \usepackage{textcomp}
-    \DeclareUnicodeCharacter{B0}{\textdegree}
     \usepackage[usenames]{color}
     \usepackage{graphicx}
     \usepackage{hyperref}
@@ -53,15 +74,11 @@
     % Line height
     \linespread{0.98}
 
-    % Fonts
-    \usepackage[T1]{fontenc}
-    \usepackage{charter}
-
     % Set your name here
     \def\name{<xsl:value-of select="contact/name"/>}
 
     % The job title
-    \def\title{<xsl:value-of select="contact/title"/>}
+    \def\title{<xsl:value-of select="translate(contact/title,'&amp;','/')"/>}
 
     \definecolor{myurlcolor}{rgb}{0,0.06,0.35}
 
@@ -71,7 +88,7 @@
 
     % Replace this with a link to your CV if you like, or set it empty
     % (as in \def\footerlink{}) to remove the link in the footer:
-    \def\footerlink{<xsl:value-of select="contact/homepage"/>}
+    \def\footerlink{<xsl:if test="contact/homepage"><xsl:value-of select="contact/homepage"/></xsl:if>}
 
     % The following metadata will show up in the PDF properties
     \hypersetup{
@@ -85,9 +102,9 @@
     }
 
     \geometry{
-      body={6.9in, 9in},
-      left=0.7in,
-      top=0.8in
+      body={7.5in, 9.9in},
+      left=0.5in,
+      top=0.6in
     }
 
     % Customize page headers
@@ -96,9 +113,9 @@
     \thispagestyle{empty}
 
     % Custom section fonts
-    \usepackage{sectsty}
-    \sectionfont{\ttfamily\bfseries\Large}
-    \subsectionfont{\ttfamily\mdseries\scshape\large}
+    %\usepackage{sectsty}
+    %\sectionfont{\ttfamily\bfseries\Large}
+    %\subsectionfont{\ttfamily\mdseries\scshape\large}
 
     % Don't indent paragraphs.
     \setlength\parindent{0em}
@@ -115,38 +132,32 @@
     \begin{document}
 
     % Place name at left
-    {\huge \name} {\hfill \large \title}
+    {\huge \name} \\ \\
+    {\hfill \large \title}
 
     <xsl:for-each select="child::contact">
 
       <xsl:if test="photo">
         <!-- source: https://en.wikibooks.org/wiki/LaTeX/Picture -->
         \begin{picture}(0,0)(80,80)
-         \put(504,5){\hbox{\includegraphics[width=80pt]{<xsl:value-of select="photo"/>}}}
+         \put(540,15){\hbox{\includegraphics[width=80pt]{<xsl:value-of select="photo"/>}}}
         \end{picture}
       </xsl:if>
 
       \begin{tabular}{ll}
         <!-- Info -->
-        <xsl:value-of select="info/@title" />
-        <xsl:value-of select="info" />
-        \\
+        <xsl:value-of select="info" /> \\
 
         <!-- Phone -->
-        <xsl:value-of select="phone/@title" />
-        <xsl:call-template name="getTwoDots" />
-        <xsl:value-of select="phone" />
-        \\
+        📞 <xsl:value-of select="phone" /> \\
 
         <!-- Email -->
-        <xsl:value-of select="email/@title" />
-        <xsl:call-template name="getTwoDots" />
-        \href{mailto:<xsl:value-of select="email"/>}{\tt <xsl:value-of select="email"/>} \\
+        📧 \href{mailto:<xsl:value-of select="email"/>}{\tt <xsl:value-of select="email"/>} \\
 
         <!-- Homepage -->
-        <xsl:value-of select="homepage/@title" />
-        <xsl:call-template name="getTwoDots" />
-        \href{mailto:<xsl:value-of select="homepage"/>}{\tt <xsl:value-of select="homepage"/>} \\
+        <xsl:if test="homepage">
+          🌐 \href{mailto:<xsl:value-of select="homepage"/>}{\tt <xsl:value-of select="homepage"/>} \\
+        </xsl:if>
       \end{tabular}
 
     </xsl:for-each>
@@ -267,6 +278,14 @@
  <xsl:template name="string-replace-all">
     <xsl:param name="text" />
     <xsl:choose>
+
+      <xsl:when test="contains($text, '&amp;')">
+        <xsl:value-of select="substring-before($text,'&amp;')" />
+        <xsl:value-of select="'\&amp;'" />
+        <xsl:call-template name="string-replace-all">
+          <xsl:with-param name="text" select="substring-after($text,'&amp;')" />
+        </xsl:call-template>
+      </xsl:when>
 
       <xsl:when test="contains($text, 'C#')">
         <xsl:value-of select="substring-before($text,'C#')" />
