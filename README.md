@@ -36,7 +36,7 @@ A very simple `Makefile` is provided, modify the sources under `./src` and do:
 
 Magic happens, in your `./dest` file a surprise is waiting for you.
 
-## Tidy HTML5
+## Tidy HTML5
 
 You need a recent version of tidy html5
 
