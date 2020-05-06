@@ -6,14 +6,19 @@ Generates your CV out of simple XML syntax
 
 This package has been sucessfully tested on a Debian/Ubuntu Linux OS, everything should work fine assuming you installed these libraries:
 
-	# latex
-	sudo apt-get install texlive texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-lang-all
+```
+# latex
+apt install texlive texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-lang-all
 
-	# pdf
-	sudo apt-get install pdflatex
+# pdf
+apt install pdflatex
 
-	# xslt
-	sudo apt-get install xsltproc
+# xslt
+apt install xsltproc
+
+# inkscape
+apt install inkscape
+```
 
 node >= v6
 

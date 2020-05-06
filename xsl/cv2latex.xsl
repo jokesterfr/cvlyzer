@@ -22,7 +22,10 @@
     \documentclass[letterpaper]{article}
     \usepackage[utf8x]{inputenc}
     \usepackage{fontspec}
-    \setmainfont{Liberation Sans}
+    \usepackage{scalefnt}
+    \setmainfont{Roboto}
+    \setmonofont[Scale=0.8]{DejaVu Sans Mono}
+    <!-- \setmainfont{Liberation Sans} -->
     <xsl:choose>
       <xsl:when test="@lang = 'fr'">
         \usepackage[french]{babel}
@@ -49,20 +52,14 @@
 
     % Emoji handling
     \usepackage{newunicodechar}
-    \newunicodechar{📧}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/e-mail-symbol_1f4e7.png}}}}
-    \newunicodechar{📞}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/telephone-receiver_1f4de.png}}}}
-    \newunicodechar{🌐}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/globe-with-meridians_1f310.png}}}}
+    \newunicodechar{👤}{{\raisebox{-0.2em}{\includegraphics[height=1em]{assets/pdf/bust-in-silhouette_1f464}}}}
+    \newunicodechar{📧}{{\raisebox{-0.2em}{\includegraphics[height=1em]{assets/pdf/e-mail-symbol_1f4e7.png}}}}
+    \newunicodechar{📞}{{\raisebox{-0.2em}{\includegraphics[height=1em]{assets/pdf/telephone-receiver_1f4de.png}}}}
+    \newunicodechar{🌐}{{\raisebox{-0.2em}{\includegraphics[height=1em]{assets/pdf/globe-with-meridians_1f310.png}}}}
 
-    \newunicodechar{💰}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/money-bag_1f4b0.png}}}}
-    \newunicodechar{🌍}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/earth-globe-europe-africa_1f30d.png}}}}
-    \newunicodechar{📐}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/triangular-ruler_1f4d0.png}}}}
-    \newunicodechar{🔗}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/link-symbol_1f517.png}}}}
-    \newunicodechar{🔐}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/closed-lock-with-key_1f510.png}}}}
-    \newunicodechar{♿}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/wheelchair-symbol_267f.png}}}}
-
-    \newunicodechar{🧗}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/person-climbing_1f9d7.png}}}}
-    \newunicodechar{🎵}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/musical-note_1f3b5.png}}}}
-    \newunicodechar{🧳}{{\raisebox{-0.2em}{\includegraphics[height=1em]{img/luggage_1f9f3.png}}}}
+    \newunicodechar{🧗}{{\raisebox{-0.2em}{\includegraphics[height=1em]{assets/pdf/person-climbing_1f9d7.png}}}}
+    \newunicodechar{🎵}{{\raisebox{-0.2em}{\includegraphics[height=1em]{assets/pdf/musical-note_1f3b5.png}}}}
+    \newunicodechar{🧳}{{\raisebox{-0.2em}{\includegraphics[height=1em]{assets/pdf/luggage_1f9f3.png}}}}
 
     \usepackage{textcomp}
     \usepackage[usenames]{color}
@@ -70,6 +67,7 @@
     \usepackage{hyperref}
     \usepackage{geometry}
     \usepackage{wrapfig}
+    \usepackage[absolute,overlay]{textpos}
 
     % Line height
     \linespread{0.98}
@@ -78,8 +76,9 @@
     \def\name{<xsl:value-of select="contact/name"/>}
 
     % The job title
-    \def\title{<xsl:value-of select="translate(contact/title,'&amp;','/')"/>}
+    \def\title{<xsl:call-template name="string-replace-all"><xsl:with-param name="text" select="contact/title" /></xsl:call-template>}
 
+    % Links color
     \definecolor{myurlcolor}{rgb}{0,0.06,0.35}
 
     % make "C++" look pretty when used in text by touching up the plus signs
@@ -113,9 +112,9 @@
     \thispagestyle{empty}
 
     % Custom section fonts
-    %\usepackage{sectsty}
-    %\sectionfont{\ttfamily\bfseries\Large}
-    %\subsectionfont{\ttfamily\mdseries\scshape\large}
+    \usepackage{sectsty}
+    \sectionfont{\ttfamily\mdseries\sffamily\Large}
+    \subsectionfont{\ttfamily\mdseries\scshape\large}
 
     % Don't indent paragraphs.
     \setlength\parindent{0em}
@@ -129,37 +128,57 @@
       \end{list}
     }
 
-    \begin{document}
+    % Prepare background picture insertion
+    \usepackage{eso-pic}
+    \newcommand\BackgroundPic{%
+      \put(0,0){%
+        \parbox[b][\paperheight]{\paperwidth}{%
+          \includegraphics[width=\paperwidth,height=\paperheight,%
+          keepaspectratio]{assets/pdf/background.pdf}%
+          \vfill
+        }
+      }
+    }
 
-    % Place name at left
-    {\huge \name} \\ \\
-    {\hfill \large \title}
+    \begin{document}
+    \AddToShipoutPicture*{\BackgroundPic}
+
+    % Place name and title at top left of the page
+    \begin{textblock*}{5cm}(1cm,1cm)
+      { \huge \scalefont{1.1} \color{white} \name }
+    \end{textblock*}
+
+    \begin{textblock*}{15cm}(1cm,2cm)
+      { \Large \color{white} \title }
+    \end{textblock*}
+
+    \hfill
+    \vspace{4em}
 
     <xsl:for-each select="child::contact">
 
       <xsl:if test="photo">
         <!-- source: https://en.wikibooks.org/wiki/LaTeX/Picture -->
-        \begin{picture}(0,0)(80,80)
-         \put(540,15){\hbox{\includegraphics[width=80pt]{<xsl:value-of select="photo"/>}}}
+        \begin{picture}(0,0)(100,100)
+         \put(540,70){\hbox{\includegraphics[width=100pt]{<xsl:value-of select="photo"/>}}}
         \end{picture}
       </xsl:if>
-
       \begin{tabular}{ll}
         <!-- Info -->
-        <xsl:value-of select="info" /> \\
-
-        <!-- Phone -->
-        📞 <xsl:value-of select="phone" /> \\
+        \scalefont{1.1}👤 <xsl:value-of select="info" /> \hspace{0.4cm} &amp;
 
         <!-- Email -->
-        📧 \href{mailto:<xsl:value-of select="email"/>}{\tt <xsl:value-of select="email"/>} \\
+        \scalefont{1.1}📧 \href{mailto:<xsl:value-of select="email"/>}{\tt <xsl:value-of select="email"/>} \\[5pt]
+
+        <!-- Phone -->
+        \scalefont{1.1}📞 <xsl:value-of select="phone" /> \hspace{0.4cm} &amp;
 
         <!-- Homepage -->
         <xsl:if test="homepage">
-          🌐 \href{mailto:<xsl:value-of select="homepage"/>}{\tt <xsl:value-of select="homepage"/>} \\
+          \scalefont{1.1}🌐 \href{mailto:<xsl:value-of select="homepage"/>}{\tt <xsl:value-of select="homepage"/>} \\
         </xsl:if>
       \end{tabular}
-
+      \vspace{0.2cm}
     </xsl:for-each>
 
     <!-- Manage all sections -->
@@ -180,7 +199,9 @@
     \begin{center}
       \begin{footnotesize}
         \lastupdated \\
-        \href{\footerlink}{\texttt{\footerlink}}
+        <xsl:if test="contact/homepage">
+         🌐 \href{\footerlink}{\texttt{\footerlink}}
+       </xsl:if>
       \end{footnotesize}
     \end{center}
 

@@ -4,7 +4,6 @@ PROFILE:VCARD
 CLASS:PUBLIC
 N:Désiles;Clément;;Mr;
 FN:Clément Désiles
-NICKNAME:Jokester
 TITLE:Pre-sales Engineer
 URL:https://clementdesiles.fr
 SOURCE;VALUE=uri:https://clementdesiles.fr/vcard.vcf
@@ -12,6 +11,6 @@ PHOTO;VALUE=uri:https://clementdesiles.fr/photo.png
 TEL;TYPE=cell:+33658124561
 EMAIL:clementdesilesfr@gmail.com
 TZ:+01:00
-GEO:48.1159156;-1.6884545
+GEO:48.112720;-1.680282
 CATEGORIES:Engineer, Linux, Open Source, Cloud computing
 END:VCARD

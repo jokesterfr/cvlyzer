@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output doctype-system="about:legacy-compat" indent="yes" />
   <xsl:param name="pubdate" select="YYYYMMDD" />
 
@@ -30,9 +29,44 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
       </head>
       <body>
+        <svg
+           xmlns="http://www.w3.org/2000/svg"
+           xmlns:svg="http://www.w3.org/2000/svg"
+           viewBox="0 0 200 30"
+           width="100%"
+           height="150px"
+           preserveAspectRatio="none"
+           version="1.1"
+           id="background">
+          <defs id="background" />
+          <g
+             inkscape:label="Layer 1"
+             inkscape:groupmode="layer"
+             id="layer1"
+             transform="translate(0,-266.98752)">
+            <rect
+               style="opacity:1;vector-effect:none;fill:#5fc28c;fill-opacity:1;stroke:none;stroke-width:0.22015916px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+               id="rect5188"
+               width="200"
+               height="30"
+               x="0"
+               y="267" />
+            <path
+               style="fill:#45a36f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="M 46.504896,267.06581 0,267.00001 V 297 h 200 z"
+               id="path5192"
+               inkscape:connector-curvature="0" />
+            <path
+               style="fill:#348656;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+               d="M 200,297 54.317782,266.98752 31.324258,267.06581 Z"
+               id="path5190"
+               inkscape:connector-curvature="0"
+               sodipodi:nodetypes="cccc" />
+          </g>
+        </svg>
         <header>
           <nav>
-            <ul>
+            <ul id="locale-selector">
               <li><a href="cv_fr.html">en Français</a></li>
               <li><a href="cv_en.html">in English</a></li>
               <li><a href="cv_es.html">en Español</a></li>
@@ -42,31 +76,34 @@
           <nav class="right">
             <ul>
               <li>
-                <a class="pdf-download">
+                <a class="pdf-download" title="Fichier PDF">
                   <xsl:attribute name="href">
-                    <xsl:text>../pdf/cv_</xsl:text>
+                    <xsl:text>./pdf/cv_</xsl:text>
                     <xsl:value-of select="@lang" />
                     <xsl:value-of select="@suffix" />
                     <xsl:text>.pdf</xsl:text>
                   </xsl:attribute>
-                  Fichier PDF
                 </a>
               </li>
             </ul>
           </nav>
           <h1>
             <xsl:value-of select="contact/name" />
-            <span><xsl:value-of select="contact/title" /></span>
+          </h1>
+          <h1 class="subtitle">
+            <xsl:value-of select="contact/title" />
           </h1>
         </header>
         <!-- There is only one contact case, but it must be parsed differently -->
         <xsl:for-each select="child::contact">
           <section id="contact">
+            <xsl:if test="address">
             <p id="address">
               <xsl:call-template name="string-replace-all">
                 <xsl:with-param name="text" select="address/text() | address/*" />
               </xsl:call-template>
             </p>
+            </xsl:if>
 
             <xsl:if test="photo">
               <img>

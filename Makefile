@@ -21,75 +21,92 @@ SRC=src
 XSL=xsl
 IMG=img
 CSS=css
-DIST_HTML=dist/html
+WEB_ASSETS=assets/web
+PDF_ASSETS=assets/pdf
+DIST_WEB=dist
 DIST_PDF=dist/pdf
 
 RM=rm -rf
 MKDIR=mkdir -p
 CP=cp -rfL
+GIT=git
 
 LATEX=xelatex
 XSLT=xsltproc
+INKSCAPE=inkscape
 
 AUTHOR=clement_desiles
 YEAR=`date +%Y`
 SUFFIX=_${AUTHOR}_${YEAR}
 
 # localize the current date
-date_en="$(./getLocaleDate.js en)"
-date_fr="$(./getLocaleDate.js fr)"
-date_es="$(./getLocaleDate.js es)"
-date_it="$(./getLocaleDate.js it)"
+date_en="`./getLocaleDate.js en`"
+date_fr="`./getLocaleDate.js fr`"
+date_es="`./getLocaleDate.js es`"
+date_it="`./getLocaleDate.js it`"
 
-all: en fr es it tidy
+all: assets en fr es it tidy
 
-en: $(DIST_PDF) $(DIST_HTML) update $(SRC)/cv_en.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
+assets: $(PDF_ASSETS)/background.pdf
+
+$(PDF_ASSETS)/background.pdf: $(IMG)/background.svg
+	$(INKSCAPE) -D -z --file=$(IMG)/background.svg --export-pdf=$(PDF_ASSETS)/background.pdf --export-latex
+
+en: $(DIST_PDF) $(DIST_WEB) update $(SRC)/cv_en.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
 	$(XSLT) -stringparam pubdate ${date_en} $(XSL)/cv2latex.xsl $(SRC)/cv_en.xml > $(DIST_PDF)/cv_en${SUFFIX}.tex
 	$(LATEX) -output-directory=$(DIST_PDF) $(DIST_PDF)/cv_en${SUFFIX}.tex
-	$(XSLT) -stringparam pubdate ${date_en} $(XSL)/cv2html5.xsl $(SRC)/cv_en.xml > $(DIST_HTML)/cv_en.html
+	$(XSLT) -stringparam pubdate ${date_en} $(XSL)/cv2html5.xsl $(SRC)/cv_en.xml > $(DIST_WEB)/cv_en.html
 	$(RM) $(DIST_PDF)/cv_en${SUFFIX}.log $(DIST_PDF)/cv_en${SUFFIX}.out $(DIST_PDF)/cv_en${SUFFIX}.aux $(DIST_PDF)/cv_en${SUFFIX}.tex
 
-es: $(DIST_PDF) $(DIST_HTML) update $(SRC)/cv_es.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
+es: $(DIST_PDF) $(DIST_WEB) update $(SRC)/cv_es.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
 	$(XSLT) -stringparam pubdate ${date_es} $(XSL)/cv2latex.xsl $(SRC)/cv_es.xml > $(DIST_PDF)/cv_es${SUFFIX}.tex
 	$(LATEX) -output-directory=$(DIST_PDF) $(DIST_PDF)/cv_es${SUFFIX}.tex
-	$(XSLT) -stringparam pubdate ${date_es} $(XSL)/cv2html5.xsl $(SRC)/cv_es.xml > $(DIST_HTML)/cv_es.html
+	$(XSLT) -stringparam pubdate ${date_es} $(XSL)/cv2html5.xsl $(SRC)/cv_es.xml > $(DIST_WEB)/cv_es.html
 	$(RM) $(DIST_PDF)/cv_es${SUFFIX}.log $(DIST_PDF)/cv_es${SUFFIX}.out $(DIST_PDF)/cv_es${SUFFIX}.aux $(DIST_PDF)/cv_es${SUFFIX}.tex
 
-fr: $(DIST_PDF) $(DIST_HTML) update $(SRC)/cv_fr.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
+fr: $(DIST_PDF) $(DIST_WEB) update $(SRC)/cv_fr.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
 	$(XSLT) -stringparam pubdate ${date_fr} $(XSL)/cv2latex.xsl $(SRC)/cv_fr.xml > $(DIST_PDF)/cv_fr${SUFFIX}.tex
 	$(LATEX) -output-directory=$(DIST_PDF) $(DIST_PDF)/cv_fr${SUFFIX}.tex
-	$(XSLT) -stringparam pubdate ${date_fr} $(XSL)/cv2html5.xsl $(SRC)/cv_fr.xml > $(DIST_HTML)/cv_fr.html
+	$(XSLT) -stringparam pubdate ${date_fr} $(XSL)/cv2html5.xsl $(SRC)/cv_fr.xml > $(DIST_WEB)/cv_fr.html
 	$(RM) $(DIST_PDF)/cv_fr${SUFFIX}.log $(DIST_PDF)/cv_fr${SUFFIX}.out $(DIST_PDF)/cv_fr${SUFFIX}.aux $(DIST_PDF)/cv_fr${SUFFIX}.tex
 
-it: $(DIST_PDF) $(DIST_HTML) update $(SRC)/cv_it.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
+it: $(DIST_PDF) $(DIST_WEB) update $(SRC)/cv_it.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
 	$(XSLT) -stringparam pubdate ${date_it} $(XSL)/cv2latex.xsl $(SRC)/cv_it.xml > $(DIST_PDF)/cv_it${SUFFIX}.tex
 	$(LATEX) -output-directory=$(DIST_PDF) $(DIST_PDF)/cv_it${SUFFIX}.tex
-	$(XSLT) -stringparam pubdate ${date_it} $(XSL)/cv2html5.xsl $(SRC)/cv_it.xml > $(DIST_HTML)/cv_it.html
+	$(XSLT) -stringparam pubdate ${date_it} $(XSL)/cv2html5.xsl $(SRC)/cv_it.xml > $(DIST_WEB)/cv_it.html
 	$(RM) $(DIST_PDF)/cv_it${SUFFIX}.log $(DIST_PDF)/cv_it${SUFFIX}.out $(DIST_PDF)/cv_it${SUFFIX}.aux $(DIST_PDF)/cv_it${SUFFIX}.tex
 
 tidy:
-	tidy -w 0 -q -m -i $(DIST_HTML)/*.html || true
+	tidy -w 0 -q -m -i $(DIST_WEB)/*.html || true
 
 $(DIST_PDF):
 	$(MKDIR) $(DIST_PDF)
 
-$(DIST_HTML):
-	$(MKDIR) $(DIST_HTML)
+$(DIST_WEB):
+	$(MKDIR) $(DIST_WEB)
 
-update:
-	$(CP) $(CSS)/ $(IMG)/ $(DIST_HTML)
+update: dist
+	$(CP) $(CSS) $(IMG) $(DIST_WEB)
+	$(CP) $(WEB_ASSETS)/* $(DIST_WEB)/img/
 
 clean:
-	$(RM) $(DIST_PDF) $(DIST_HTML)
+	$(RM) $(DIST_PDF) $(DIST_WEB)
+
+dist-clean:
+	$(GIT) -c core.excludesfile=/dev/null clean -X -d -f
 
 show-fr:
-	xdg-open $(DIST_HTML)/cv_fr.html
-	xdg-open $(DIST_PDF)/cv_fr${SUFFIX}.pdf
+	browse $(DIST_WEB)/cv_fr.html
+	browse $(DIST_PDF)/cv_fr${SUFFIX}.pdf
 
 show-en:
-	xdg-open $(DIST_HTML)/cv_en.html
-	xdg-open $(DIST_PDF)/cv_en${SUFFIX}.pdf
+	browse $(DIST_WEB)/cv_en.html
+	browse $(DIST_PDF)/cv_en${SUFFIX}.pdf
 
 show-es:
-	xdg-open $(DIST_HTML)/cv_es.html
-	xdg-open $(DIST_PDF)/cv_es${SUFFIX}.pdf
+	browse $(DIST_WEB)/cv_es.html
+	browse $(DIST_PDF)/cv_es${SUFFIX}.pdf
+
+show-it:
+	browse $(DIST_WEB)/cv_it.html
+	browse $(DIST_PDF)/cv_it${SUFFIX}.pdf

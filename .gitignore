@@ -1,7 +1,6 @@
-missfont.log
 *~
-src_perso/
 dist/
 node_modules/
+notes/
 *.log
-career/
+*.pdf_tex
