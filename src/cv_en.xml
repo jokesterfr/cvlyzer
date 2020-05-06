@@ -5,16 +5,16 @@
 <cv lang="en" suffix="_clement_desiles_2020">
   <contact title="Contact">
     <name title="Name">Clément Désiles</name>
-    <title>Presales engineer &amp; Node.js lead developer</title>
+    <title>Senior Node.js developer &amp; Presales engineer</title>
     <info>31 - driving licence</info>
     <phone>+33 6 58 12 45 61</phone>
     <email>clementdesilesfr@gmail.com</email>
     <homepage>https://clementdesiles.fr</homepage>
-    <photo width="128">img/photo.jpg</photo>
-    <keywords>curriculum vitae, pre-sales engineer, engineering, Node.js, full-stack, Linux, CI, CD, Ansible</keywords>
+    <photo width="128">img/photo.png</photo>
+    <keywords>curriculum vitae, resume, pre-sales, lead dev, full-stack, Node.js, Linux, CI, CD, Docker, Ansible</keywords>
   </contact>
 
-  <section title="Work experience">
+  <section title="Experience">
     <subsection title="Presales Engineer, Hoppen (ex. Télécom Santé), Rennes" date="since June 2016 – 4 years">
       <item>Presales: design and setup of demo kits, showrooms, answer calls to tenders, witness rooms, costings.</item>
       <item>Export: technical support to international sales (Portugal, Switzerland, Quatar, Saudi Arabia...), answser to tenders, demos, deployments being Key Account Manager.</item>
