@@ -21,6 +21,7 @@ SRC=src
 XSL=xsl
 IMG=img
 CSS=css
+ICONS=icons
 WEB_ASSETS=assets/web
 PDF_ASSETS=assets/pdf
 DIST_WEB=dist
@@ -88,6 +89,8 @@ $(DIST_WEB):
 update: dist
 	$(CP) $(CSS) $(IMG) $(DIST_WEB)
 	$(CP) $(WEB_ASSETS)/* $(DIST_WEB)/img/
+	$(CP) $(ICONS) $(DIST_WEB)
+	$(CP) index.html $(DIST_WEB)
 
 clean:
 	$(RM) $(DIST_PDF) $(DIST_WEB)

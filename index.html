@@ -89,6 +89,11 @@
         border-bottom: 1px solid #ddd;
         font-size: 0.9em;
         position: relative;
+        color: #999;
+      }
+
+      footer a {
+        color: #43658a;
       }
 
       body > canvas {
@@ -98,6 +103,14 @@
         z-index: 0;
       }
 
+      #networking {
+        justify-content: center;
+        display: flex;
+      }
+      #networking > a {
+        flex-basis: 200px;
+        text-align: center;
+      }
       .github-ribbon {
         position: absolute;
         top: 0;
@@ -123,30 +136,43 @@
     <section id="main">
       <h2>Curriculum Vitae</h2>
       <p>
-        <a href="./dist/html/cv_fr.html" alt="">En Français</a>
-        (<a href="./dist/pdf/cv_fr_clement_desiles_2020.pdf" alt="">fichier PDF</a>)
+        <a href="./cv_fr.html" alt="">En Français</a>
+        (<a href="./pdf/cv_fr_clement_desiles_2020.pdf" alt="">fichier PDF</a>)
       </p>
       <p>
-        <a href="./dist/html/cv_en.html" alt="">In English</a>
-        (<a href="./dist/pdf/cv_en_clement_desiles_2020.pdf" alt="">PDF file</a>)
+        <a href="./cv_en.html" alt="">In English</a>
+        (<a href="./pdf/cv_en_clement_desiles_2020.pdf" alt="">PDF file</a>)
+      </p>
+      <!--
+      <p>
+        <a href="./cv_es.html" alt="">En Español</a>
+        (<a href="./pdf/cv_es_clement_desiles_2020.pdf" alt="">fichero PDF</a>)
       </p>
       <p>
-        <a href="./dist/html/cv_es.html" alt="">En Español</a>
-        (<a href="./dist/pdf/cv_es_clement_desiles_2020.pdf" alt="">fichero PDF</a>)
+        <a href="./cv_it.html" alt="">In Italiano</a>
+        (<a href="./pdf/cv_it_clement_desiles_2020.pdf" alt="">file PDF</a>)
       </p>
-      <p>
-        <a href="./dist/html/cv_it.html" alt="">In Italiano</a>
-        (<a href="./dist/pdf/cv_it_clement_desiles_2020.pdf" alt="">file PDF</a>)
-      </p>
-      <h2>Contact</h2>
-      <p>
-        My <a href="./vcard.vcf" alt="">vCard</a> to get in touch.
-      </p>
-      <p>
-        My <a href="https://www.linkedin.com/in/clementdesiles" alt="">LinkedIn profile</a>.
-      </p>
-      <p>
-        My <a href="https://github.com/jokesterfr" alt="">Github profile</a>.
+      -->
+      <h2>Get in touch with me</h2>
+      <p id="networking">
+        <a href="https://www.linkedin.com/in/clementdesiles" title="my LinkedIn profile">
+          <img src="img/linkedin.svg" alt="LinkedIn" height="64px" width="64px" />
+        </a>
+        <a href="https://github.com/jokesterfr" title="my Github profile">
+          <img src="img/github.svg" alt="Github" height="64px" width="64px" />
+        </a>
+        <a href="https://www.npmjs.com/~jokesterfr" title="my NPM.js profile">
+          <img src="img/npm.svg" alt="Npm" height="64px" width="64px" />
+        </a>
+        <a href="https://stackoverflow.com/users/2161580/jokesterfr" title="my Stack Overflow profile">
+          <img src="img/stack-overflow.svg" alt="Stack Overflow" height="64px" width="64px" />
+        </a>
+        <a href="https://hub.docker.com/u/jokesterfr" title="my Docker hub profile">
+          <img src="img/docker.svg" alt="Docker hub" height="64px" width="64px" />
+        </a>
+        <a href="./vcard.vcf" title="download my vCard">
+          <img src="img/vcard.svg" alt="vCard" height="64px" width="64px" />
+        </a>
       </p>
     </section>
     <footer>
