@@ -17,7 +17,7 @@
   <section title="Experience">
     <subsection title="Presales Engineer, Hoppen (ex. Télécom Santé), Rennes" date="since June 2016 – 4 years">
       <item>Presales: design and setup of demo kits, showrooms, answer calls to tenders, witness rooms, costings.</item>
-      <item>Export: technical support to international sales (Portugal, Switzerland, Quatar, Saudi Arabia...), answser to tenders, demos, deployments being Key Account Manager.</item>
+      <item>Export: technical support to international sales (Portugal, Switzerland, Quatar, Saudi Arabia...), answser to tenders, demos, deployments being Account Manager.</item>
       <item>Lead dev: <dfn>Docker</dfn> packaging, migration of 800 <dfn>Gitlab</dfn> projects, CI/CD setups (<dfn>Gitlab Runners</dfn>, <dfn>Ansible</dfn>, <dfn>Artifactory</dfn>). <dfn>Jira</dfn> deployment for our 300 employees.</item>
       <item>Interconnexion: medical records, medical imaging, meal ordering, invoicing, <dfn>CMMS</dfn>, <dfn>SSO</dfn>, home automation (<dfn>Siemens</dfn>, <dfn>KNX</dfn>).</item>
       <item>Security: risk assessment, hardening, technology intelligence, payment and authentication systems.</item>
@@ -49,16 +49,7 @@
     </subsection>
   </section>
 
-  <section title="Education">
-    <subsection title="Master’s Degree, Engineering Degree" date="2007–2012">
-      <item>Top french engineers school of Brest (<a href="https://www.enib.fr">ENIB</a>), France</item>
-    </subsection>
-    <subsection title="Student mobility in Spain" date="2012">
-      <item>University of Cadiz (<a href="http://www.uca.es/">UCA</a>), Spain</item>
-    </subsection>
-  </section>
-
-  <section title="Languages and skills">
+  <section title="Languages and Skills">
     <subsection title="Computer Sciences">
       <item>Languages: <dfn>Node.js, Python, C, C++, bash</dfn></item>
       <item>Adminsys: <dfn>Ubuntu, Archlinux, LFS, Ansible, systemd</dfn></item>
@@ -94,6 +85,15 @@
       <item>Italian (fluent, work in Italy)</item>
       <item>Spanish (intermediate, studies in Spain)</item>
       <item>German (basics, internship in Germany)</item>
+    </subsection>
+  </section>
+
+  <section title="Education">
+    <subsection title="Master’s Degree, Engineering Degree" date="2007–2012">
+      <item>Top french engineers school of Brest (<a href="https://www.enib.fr">ENIB</a>), France</item>
+    </subsection>
+    <subsection title="Student mobility in Spain" date="2012">
+      <item>University of Cadiz (<a href="http://www.uca.es/">UCA</a>), Spain</item>
     </subsection>
   </section>
 
