@@ -2,6 +2,8 @@
 
 ## Upcoming changes
 
+* [FEA] Add nyan cat easter egg
+* [FIX] Fix CSS in resume web pages background
 * [FIX] Fix resume data accordingly to the last reviews (thx guys)
 * [FIX] Fix homepage presentation
 * [FIX] Add more details about licensing

@@ -30,14 +30,14 @@
       </head>
       <body>
         <svg
+           id="green-layout"
            xmlns="http://www.w3.org/2000/svg"
            xmlns:svg="http://www.w3.org/2000/svg"
            viewBox="0 0 200 30"
            width="100%"
            height="150px"
            preserveAspectRatio="none"
-           version="1.1"
-           id="green-layout">
+           version="1.1">
           <defs id="green-layout" />
           <g
              id="layer1"

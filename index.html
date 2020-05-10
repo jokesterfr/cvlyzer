@@ -236,13 +236,117 @@
         </p>
     </footer>
     <script>
-      // Yes I'm tracking you :p I'll soon install piwik instead of this.
+      // Yes I'm tracking you!
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-72455400-1', 'auto');
       ga('send', 'pageview');
+    </script>
+    <script>
+      // nyan cat easter-egg!
+      // see https://github.com/jimpo/nyancat
+      const nyan = (function() {
+      let STEP_SIZE = 5;
+      let body, img, targetX, targetY, mouseX = 0, mouseY = 0;
+
+      function createImgElement() {
+          img = document.createElement('img');
+          img.src = 'img/nyancat.gif';
+          img.style['width'] = '200px';
+          img.style['z-index'] = '100';
+          img.style['position'] = 'fixed';
+          img.style['left'] = 0;
+          img.style['top'] = 0;
+      }
+
+      function randomWalk() {
+        setRandomTarget();
+        setInterval(() => {
+          if (atTarget()) {
+            setRandomTarget()
+          }
+          stepTowardsTarget();
+        }, 50);
+      }
+
+      function speed() {
+          let bonus = 0;
+          let dx = mouseX - posX();
+          let dy = mouseY - posY();
+          let dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 500) {
+              bonus = (500 - dist) / 10;
+          }
+          return STEP_SIZE + bonus;
+      }
+
+      function atTarget() {
+          return posX() == targetX && posY() == targetY;
+      }
+
+      function setRandomTarget() {
+          targetX = Math.floor(Math.random() * window.innerWidth);
+          targetY = Math.floor(Math.random() * window.innerHeight);
+      }
+
+      function posX() {
+          return parseFloat(img.style['left']);
+      }
+
+      function posY() {
+          return parseFloat(img.style['top']);
+      }
+
+      function stepTowardsTarget() {
+          var dx = targetX - posX();
+          var dy = targetY - posY();
+          var d = Math.sqrt(dx * dx + dy * dy);
+          var step = speed() / 4;
+          if (d <= step) {
+              img.style['left'] = targetX + 'px';
+              img.style['top']  = targetY + 'px';
+          }
+          else {
+              img.style['left'] = posX() + dx * step / d + 'px';
+              img.style['top']  = posY() + dy * step / d + 'px';
+          }
+      }
+
+      function setMouseListener() {
+          window.addEventListener('mousemove', function () {
+              mouseX = window.event.clientX;
+              mouseY = window.event.clientY;
+          });
+      }
+
+      return function() {
+          createImgElement()
+          body = document.getElementsByTagName('body')[0];
+          body.appendChild(img);
+          setMouseListener();
+          randomWalk();
+      };
+
+  })();
+
+    // trigger
+      let k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+      let n = 0;
+      document.addEventListener('keydown', event => {
+        if (event.keyCode !== k[n++]) {
+          n = 0;
+          return;
+        }
+        if (n === k.length) {
+          nyan();
+          n = 0;
+          return false;
+        }
+      });
+
+
     </script>
   </body>
 </html>
