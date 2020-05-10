@@ -2,6 +2,7 @@
 
 ## Upcoming changes
 
+* [FIX] Add Mont Aiguille comment
 * [FIX] Optimize page speed and overall notes
 * [FEA] Add nyan cat easter egg
 * [FIX] Fix CSS in resume web pages background
