@@ -37,11 +37,9 @@
            height="150px"
            preserveAspectRatio="none"
            version="1.1"
-           id="background">
-          <defs id="background" />
+           id="green-layout">
+          <defs id="green-layout" />
           <g
-             inkscape:label="Layer 1"
-             inkscape:groupmode="layer"
              id="layer1"
              transform="translate(0,-266.98752)">
             <rect
@@ -54,14 +52,11 @@
             <path
                style="fill:#45a36f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
                d="M 46.504896,267.06581 0,267.00001 V 297 h 200 z"
-               id="path5192"
-               inkscape:connector-curvature="0" />
+               id="path5192" />
             <path
                style="fill:#348656;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
                d="M 200,297 54.317782,266.98752 31.324258,267.06581 Z"
-               id="path5190"
-               inkscape:connector-curvature="0"
-               sodipodi:nodetypes="cccc" />
+               id="path5190" />
           </g>
         </svg>
         <header>

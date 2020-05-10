@@ -23,7 +23,7 @@
     \usepackage[utf8x]{inputenc}
     \usepackage{fontspec}
     \usepackage{scalefnt}
-    \setmainfont{Roboto}
+    \setmainfont[Scale=0.9]{Roboto}
     \setmonofont[Scale=0.8]{DejaVu Sans Mono}
     <!-- \setmainfont{Liberation Sans} -->
     <xsl:choose>

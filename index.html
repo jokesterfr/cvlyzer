@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Clément Désiles</title>
+    <title>Clément Désiles - Presales engineer &amp; Lead developer</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="author" content="Clément Désiles">
     <meta name="description" content="My personal professional page, presenting my CV">
-    <meta name="keywords" content="Clément Désiles, Personal home page, page perso">
+    <meta name="keywords" content="Clément Désiles, home page, cv, resume, page perso">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
 
     <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-touch-icon-60x60.png">
@@ -23,21 +22,65 @@
     <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="icons/favicon-16x16.png" sizes="16x16">
     <link rel="manifest" href="icons/manifest.json">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg">
     <link rel="shortcut icon" href="icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="icons/mstile-144x144.png">
     <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- Style for only one page - one http request less -->
     <style type="text/css">
+      /* This style applies only for one page, we save one http request with this */
       body {
         font-size: 0.9em;
         font-family: 'Roboto', sans-serif;
         color: #25221d;
         width: 80%;
-        margin: 5em 10%;
+        margin: 4em 10% 5em 10%;
+
+        background: url('./img/mont-aiguille-1600-dither4.png') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      header {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        height: 150px;
+        box-shadow: 0px 3px 2px rgba(0,0,0,.3);
+      }
+
+      header svg#green-layout {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+
+      h1 {
+        text-align: left;
+        font-size: 2em;
+        margin: 0;
+        color: white;
+        font-weight: normal;
+        position: relative; /* to be on top of green layout */
+        top: -115px;
+        left: 4%;
+      }
+
+      h1.subtitle {
+        font-size: 1.4em;
+        padding-top: 0.3em;
+        font-weight: normal;
+        font-family: "Roboto Condensed", sans-serif;
+      }
+
+      img#photo {
+        float: right;
+        position: relative;
+        top: -181px;
+        z-index: 1000;
+        left: -4%;
       }
 
       a {
@@ -53,19 +96,15 @@
         text-align: center;
       }
 
-      section#main {
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-      }
       section#main h2:first-child {
         margin-top: 0px;
       }
 
       section {
         background-color: #ccc;
-        box-shadow: 0px 3px 2px #e0e0e0;
+        box-shadow: 0px 3px 2px rgba(0,0,0,.3);
         padding: 15px;
-        position: relative;
+        /*position: relative;*/
       }
 
       section p {
@@ -104,85 +143,96 @@
       }
 
       #networking {
-        justify-content: center;
         display: flex;
+        justify-content: center;
+        width: calc(100% - 26px);
       }
       #networking > a {
-        flex-basis: 200px;
-        text-align: center;
+        padding: 10px 0px 10px 0px;
+        min-width: 80px;
+        width:100%;
       }
-      .github-ribbon {
-        position: absolute;
-        top: 0;
-        right: 0;
-        border: 0;
-        z-index: 10;
+      #networking > a > * {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
       }
     </style>
   </head>
   <body>
-    <script>
-      var pattern = Trianglify({
-        width: window.innerWidth,
-        height: window.innerHeight
-      });
-      document.body.appendChild(pattern.canvas());
-    </script>
     <header>
-      <a href="https://github.com/jokesterfr/cvlyzer">
-        <img class="github-ribbon" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
-      </a>
+      <svg id="green-layout" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" viewbox="0 0 200 30" width="100%" height="150px" preserveaspectratio="none" version="1.1">
+        <defs id="green-layout"></defs>
+        <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(0,-266.98752)">
+          <rect style="opacity:1;vector-effect:none;fill:#5fc28c;fill-opacity:1;stroke:none;stroke-width:0.22015916px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" id="rect5188" width="200" height="30" x="0" y="267"></rect>
+          <path style="fill:#45a36f;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M 46.504896,267.06581 0,267.00001 V 297 h 200 z" id="path5192" inkscape:connector-curvature="0"></path>
+          <path style="fill:#348656;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M 200,297 54.317782,266.98752 31.324258,267.06581 Z" id="path5190" inkscape:connector-curvature="0" sodipodi:nodetypes="cccc"></path>
+        </g>
+      </svg>
+      <h1>Clément Désiles</h1>
+      <h1 class="subtitle">Presales engineer &amp; Lead developer</h1>
+      <img id="photo" src="img/photo.png" width="128" height="" alt="Clément Désiles' smilling face">
     </header>
+
     <section id="main">
       <h2>Curriculum Vitae</h2>
       <p>
-        <a href="./cv_fr.html" alt="">En Français</a>
-        (<a href="./pdf/cv_fr_clement_desiles_2020.pdf" alt="">fichier PDF</a>)
+        <a href="./cv_fr.html" title="Mon CV en Français">En Français</a>
+        (<a href="./pdf/cv_fr_clement_desiles_2020.pdf" title="fichier PDF">fichier PDF</a>)
       </p>
       <p>
-        <a href="./cv_en.html" alt="">In English</a>
-        (<a href="./pdf/cv_en_clement_desiles_2020.pdf" alt="">PDF file</a>)
+        <a href="./cv_en.html" title="My resume in English">In English</a>
+        (<a href="./pdf/cv_en_clement_desiles_2020.pdf" title="PDF file">PDF file</a>)
       </p>
       <!--
       <p>
-        <a href="./cv_es.html" alt="">En Español</a>
-        (<a href="./pdf/cv_es_clement_desiles_2020.pdf" alt="">fichero PDF</a>)
+        <a href="./cv_es.html" title="">En Español</a>
+        (<a href="./pdf/cv_es_clement_desiles_2020.pdf" title="fichero PDF">fichero PDF</a>)
       </p>
       <p>
-        <a href="./cv_it.html" alt="">In Italiano</a>
-        (<a href="./pdf/cv_it_clement_desiles_2020.pdf" alt="">file PDF</a>)
+        <a href="./cv_it.html" title="">In Italiano</a>
+        (<a href="./pdf/cv_it_clement_desiles_2020.pdf" title="file PDF">file PDF</a>)
       </p>
       -->
       <h2>Get in touch with me</h2>
       <p id="networking">
-        <a href="https://www.linkedin.com/in/clementdesiles" title="my LinkedIn profile">
-          <img src="img/linkedin.svg" alt="LinkedIn" height="64px" width="64px" />
-        </a>
-        <a href="https://github.com/jokesterfr" title="my Github profile">
-          <img src="img/github.svg" alt="Github" height="64px" width="64px" />
-        </a>
-        <a href="https://www.npmjs.com/~jokesterfr" title="my NPM.js profile">
-          <img src="img/npm.svg" alt="Npm" height="64px" width="64px" />
-        </a>
-        <a href="https://stackoverflow.com/users/2161580/jokesterfr" title="my Stack Overflow profile">
-          <img src="img/stack-overflow.svg" alt="Stack Overflow" height="64px" width="64px" />
-        </a>
-        <a href="https://hub.docker.com/u/jokesterfr" title="my Docker hub profile">
-          <img src="img/docker.svg" alt="Docker hub" height="64px" width="64px" />
+        <a href="mailto:clementdesilesfr@gmail.com" title="send me an email">
+          <img src="img/email.svg" alt="email" height="64" width="64" />
+          <span>email me</span>
         </a>
         <a href="./vcard.vcf" title="download my vCard">
-          <img src="img/vcard.svg" alt="vCard" height="64px" width="64px" />
+          <img src="img/vcard.svg" alt="vCard" height="64" width="64" />
+          <span>my vCard</span>
+        </a>
+        <a href="https://www.linkedin.com/in/clementdesiles" title="my LinkedIn profile">
+          <img src="img/linkedin.svg" alt="LinkedIn" height="64" width="64" />
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/jokesterfr" title="my GitHub profile">
+          <img src="img/github.svg" alt="Github" height="64" width="64" />
+          <span>GitHub</span>
+        </a>
+        <a href="https://www.npmjs.com/~jokesterfr" title="my npm profile">
+          <img src="img/npm.svg" alt="Npm" height="64" width="64" />
+          <span>npm</span>
+        </a>
+        <a href="https://stackoverflow.com/users/2161580/jokesterfr" title="my Stack Overflow profile">
+          <img src="img/stack-overflow.svg" alt="Stack Overflow" height="64" width="64" />
+          <span>Stack Overflow</span>
+        </a>
+        <a href="https://hub.docker.com/u/jokesterfr" title="my Docker hub profile">
+          <img src="img/docker.svg" alt="Docker hub" height="64" width="64" />
+          <span>Docker hub</span>
         </a>
       </p>
     </section>
     <footer>
         <p>
-          I made a tool to generate my CV from XML to HTML5 and LaTeX outputs. Feel free to use/fork it: <a href="https://github.com/jokesterfr/cvlyzer" alt="">CVlyzer</a>
-          <br />The background of this page has been generated using <a href="https://github.com/qrohlf/trianglify">Trianglify</a>.
+          This resume has been generated with my own tool, feel free to use/fork it: <a href="https://github.com/jokesterfr/cvlyzer">CVlyzer</a>
         </p>
         <p id="copyright">
+          <!-- Prononciate [klemɑ̃ dezil] -->
           &copy; Copyright - Clément Désiles - 2020
-          <!-- [klemɑ̃ dezil] -->
         </p>
     </footer>
     <script>

@@ -1,8 +1,5 @@
 #
-#    CVlyser  Copyright (C) 2015 - Clément Désiles - main@jokester.fr
-#
-#    Commands to manage my curriculum vitae in different languages
-#    requirements: xslt, latex
+#    cvlyzer - Copyright (C) 2015 - Clément Désiles <main@jokester.fr>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -17,7 +14,7 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-SRC=src
+DATA=data
 XSL=xsl
 IMG=img
 CSS=css
@@ -53,28 +50,28 @@ assets: $(PDF_ASSETS)/background.pdf
 $(PDF_ASSETS)/background.pdf: $(IMG)/background.svg
 	$(INKSCAPE) -D -z --file=$(IMG)/background.svg --export-pdf=$(PDF_ASSETS)/background.pdf --export-latex
 
-en: $(DIST_PDF) $(DIST_WEB) update $(SRC)/cv_en.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
-	$(XSLT) -stringparam pubdate ${date_en} $(XSL)/cv2latex.xsl $(SRC)/cv_en.xml > $(DIST_PDF)/cv_en${SUFFIX}.tex
+en: $(DIST_PDF) $(DIST_WEB) update $(DATA)/cv_en.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
+	$(XSLT) -stringparam pubdate ${date_en} $(XSL)/cv2latex.xsl $(DATA)/cv_en.xml > $(DIST_PDF)/cv_en${SUFFIX}.tex
 	$(LATEX) -output-directory=$(DIST_PDF) $(DIST_PDF)/cv_en${SUFFIX}.tex
-	$(XSLT) -stringparam pubdate ${date_en} $(XSL)/cv2html5.xsl $(SRC)/cv_en.xml > $(DIST_WEB)/cv_en.html
+	$(XSLT) -stringparam pubdate ${date_en} $(XSL)/cv2html5.xsl $(DATA)/cv_en.xml > $(DIST_WEB)/cv_en.html
 	$(RM) $(DIST_PDF)/cv_en${SUFFIX}.log $(DIST_PDF)/cv_en${SUFFIX}.out $(DIST_PDF)/cv_en${SUFFIX}.aux $(DIST_PDF)/cv_en${SUFFIX}.tex
 
-es: $(DIST_PDF) $(DIST_WEB) update $(SRC)/cv_es.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
-	$(XSLT) -stringparam pubdate ${date_es} $(XSL)/cv2latex.xsl $(SRC)/cv_es.xml > $(DIST_PDF)/cv_es${SUFFIX}.tex
+es: $(DIST_PDF) $(DIST_WEB) update $(DATA)/cv_es.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
+	$(XSLT) -stringparam pubdate ${date_es} $(XSL)/cv2latex.xsl $(DATA)/cv_es.xml > $(DIST_PDF)/cv_es${SUFFIX}.tex
 	$(LATEX) -output-directory=$(DIST_PDF) $(DIST_PDF)/cv_es${SUFFIX}.tex
-	$(XSLT) -stringparam pubdate ${date_es} $(XSL)/cv2html5.xsl $(SRC)/cv_es.xml > $(DIST_WEB)/cv_es.html
+	$(XSLT) -stringparam pubdate ${date_es} $(XSL)/cv2html5.xsl $(DATA)/cv_es.xml > $(DIST_WEB)/cv_es.html
 	$(RM) $(DIST_PDF)/cv_es${SUFFIX}.log $(DIST_PDF)/cv_es${SUFFIX}.out $(DIST_PDF)/cv_es${SUFFIX}.aux $(DIST_PDF)/cv_es${SUFFIX}.tex
 
-fr: $(DIST_PDF) $(DIST_WEB) update $(SRC)/cv_fr.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
-	$(XSLT) -stringparam pubdate ${date_fr} $(XSL)/cv2latex.xsl $(SRC)/cv_fr.xml > $(DIST_PDF)/cv_fr${SUFFIX}.tex
+fr: $(DIST_PDF) $(DIST_WEB) update $(DATA)/cv_fr.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
+	$(XSLT) -stringparam pubdate ${date_fr} $(XSL)/cv2latex.xsl $(DATA)/cv_fr.xml > $(DIST_PDF)/cv_fr${SUFFIX}.tex
 	$(LATEX) -output-directory=$(DIST_PDF) $(DIST_PDF)/cv_fr${SUFFIX}.tex
-	$(XSLT) -stringparam pubdate ${date_fr} $(XSL)/cv2html5.xsl $(SRC)/cv_fr.xml > $(DIST_WEB)/cv_fr.html
+	$(XSLT) -stringparam pubdate ${date_fr} $(XSL)/cv2html5.xsl $(DATA)/cv_fr.xml > $(DIST_WEB)/cv_fr.html
 	$(RM) $(DIST_PDF)/cv_fr${SUFFIX}.log $(DIST_PDF)/cv_fr${SUFFIX}.out $(DIST_PDF)/cv_fr${SUFFIX}.aux $(DIST_PDF)/cv_fr${SUFFIX}.tex
 
-it: $(DIST_PDF) $(DIST_WEB) update $(SRC)/cv_it.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
-	$(XSLT) -stringparam pubdate ${date_it} $(XSL)/cv2latex.xsl $(SRC)/cv_it.xml > $(DIST_PDF)/cv_it${SUFFIX}.tex
+it: $(DIST_PDF) $(DIST_WEB) update $(DATA)/cv_it.xml $(XSL)/cv2html5.xsl $(XSL)/cv2latex.xsl
+	$(XSLT) -stringparam pubdate ${date_it} $(XSL)/cv2latex.xsl $(DATA)/cv_it.xml > $(DIST_PDF)/cv_it${SUFFIX}.tex
 	$(LATEX) -output-directory=$(DIST_PDF) $(DIST_PDF)/cv_it${SUFFIX}.tex
-	$(XSLT) -stringparam pubdate ${date_it} $(XSL)/cv2html5.xsl $(SRC)/cv_it.xml > $(DIST_WEB)/cv_it.html
+	$(XSLT) -stringparam pubdate ${date_it} $(XSL)/cv2html5.xsl $(DATA)/cv_it.xml > $(DIST_WEB)/cv_it.html
 	$(RM) $(DIST_PDF)/cv_it${SUFFIX}.log $(DIST_PDF)/cv_it${SUFFIX}.out $(DIST_PDF)/cv_it${SUFFIX}.aux $(DIST_PDF)/cv_it${SUFFIX}.tex
 
 tidy:
@@ -90,6 +87,7 @@ update: dist
 	$(CP) $(CSS) $(IMG) $(DIST_WEB)
 	$(CP) $(WEB_ASSETS)/* $(DIST_WEB)/img/
 	$(CP) $(ICONS) $(DIST_WEB)
+	$(CP) vcard.vcf $(DIST_WEB)
 	$(CP) index.html $(DIST_WEB)
 
 clean:

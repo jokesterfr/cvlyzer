@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "cv.dtd">
+<?xml-stylesheet type="text/xsl" href="../xsl/cv2html5.xsl"?>
+
+<cv lang="es" suffix="_clement_desiles_2017">
+  <contact title="Contact">
+    <name title="Name">Clément Désiles</name>
+    <title>Ingénieur expérimenté, profil international</title>
+    <info>Né le 17 février 1989 (28 ans) - permis de conduire (B)</info>
+    <phone title="Téléphone">+33 6 58 12 45 61</phone>
+    <email title="E-mail">clementdesilesfr@gmail.com</email>
+    <homepage title="Page Web">https://clementdesiles.fr</homepage>
+    <photo width="128" height="128">img/photo.png</photo>
+    <keywords>curriculum vitae, pre-sales engineer, computer sciences, electronics, engineering</keywords>
+  </contact>
+
+  <section title="Formation">
+    <subsection title="Diplôme d’ingénieur, grade de Master" date="2007–2012">
+      <item>Ecole Nationale d’Ingénieurs de Brest (<a href="http://www.enib.fr/">ENIB</a>), France</item>
+    </subsection>
+    <subsection title="Semestre de mobilité à l’étranger" date="2012">
+      <item>Université de Cadix (<a href="http://www.uca.es/">UCA</a>), Espagne</item>
+    </subsection>
+  </section>
+
+  <section title="Expérience">
+    <subsection title="Ingénieur avant-vente, Télécom Santé (CDI)" date="depuis juin 2016">
+      <item>Démos : mise en place et suivi des kits de démonstration, interconnexion aux logiciels métier (dossier patient, <dfn>GMAO</dfn>...) et aux plateformes partenaires.</item>
+      <item>Export : accompagnement à l’international, réponse technique aux appels d’offre.</item>
+      <item>Architecture : migration de micro-services vers <dfn>Docker</dfn>, contacteur au souffle, intégration continue.</item>
+      <item>Sécurité : analyse de risque, revue des process, systèmes de paiement et d’authentification (<dfn>RFID/SmartCard</dfn>).</item>
+    </subsection>
+    <subsection title="VIE Architecte développeur, Revevol Milan" date="mai 2015 à mai 2016">
+      <item>Intranet de 60000 utilisateurs : développement et maintenance d’une application <dfn>Google App Engine</dfn>. Collaboration avec une équipe et des clients à l’international (Inde, Malaisie, Italie, France).</item>
+      <item>Transfert de <dfn>datacenters</dfn> dans le Cloud : architecture d’un service Web distribué (US/Europe) hébergé sur <dfn>Google Compute Engine</dfn> (<dfn>devops</dfn>).</item>
+      <item>Outil IT de gestion de mobiles : réalisation d’une application Web permettant la gestion des accès de 30000 smartphones aux services <dfn>Google</dfn> du domaine de l’entreprise (<dfn>Apps for Work</dfn>).</item>
+    </subsection>
+    <subsection title="Développeur full stack, Télécom Santé (CDI)" date="septembre 2012 à avril 2015">
+      <item>Développeur et architecte d’une plateforme de micro-services pour des établissements de santé. Réalisation d’applications web tactiles, <dfn>responsive design</dfn> et internationalisées.</item>
+      <item>Encadrement : formation et suivi de stagiaires, transfert de compétences, coordination de projet.</item>
+      <item>Conception : analyse, cahier des charges, spécifications logicielles, intégration, tests, packaging.</item>
+      <item>Bas niveau : <dfn>reverse engineering</dfn> et réécriture de drivers <dfn>C</dfn>, bindings <dfn>Node.js</dfn>.</item>
+    </subsection>
+    <subsection title="Stage ingénieur, Télécom Santé" date="de février 2012 à août 2012">
+      <item>Étude de portage d’une tablette <dfn>Linux</dfn> vers <dfn>Android 64 bits</dfn>, développement d’applications <dfn>Web</dfn>.</item>
+    </subsection>
+    <subsection title="Auto-entrepreneur, développement logiciel" date="de septembre 2011 à août 2012">
+      <item>Réalisation d’une plate-forme e-Commerce pour <dfn>WorldGift</dfn>.</item>
+    </subsection>
+    <subsection title="Stage, Telemotive (industrie automobile), Munich" date="de juin 2010 à décembre 2010">
+      <item>Embarqué : travaux d’intégration de <dfn>Linux</dfn> et de services <dfn>UPnP</dfn> sur une architecture <dfn>PowerPC</dfn>.</item>
+      <item>Réseau : études de trames Ethernet encapsulées dans un réseau <dfn>MOST</dfn>.</item>
+    </subsection>
+    <subsection title="Assistant Webmaster, PMB Services (CDD puis CDI)" date="de juin 2007 à juin 2010">
+      <item>Développement d’un logiciel de gestion de bibliothèque, réalisation de chartes graphiques, d’interfaces Web et du <a href="http://sigb.net">site internet</a> multilingue de la société avec le framework <dfn>SPIP</dfn>.</item>
+    </subsection>
+  </section>
+
+  <section title="Compétences">
+    <subsection title="Informatique générale">
+      <item>Langages : <dfn>Node.js, Javascript, Python, PHP, C, C++, bash, Java, Appscript</dfn></item>
+      <item>Administration système : <dfn>Ubuntu, Archlinux, LFS, systemd, pm2</dfn></item>
+      <item>Bases de données : <dfn>MongoDB, MySQL, SQLite, OAK Jackrabbit, PostGreSQL, Oracle</dfn></item>
+      <item>Virtualisation : <dfn>Docker, Virtualbox, Qemu, VMWare</dfn></item>
+      <item>Gestion de versions : je maîtrise parfaitement <dfn>GIT</dfn> (intégrateur logiciel).</item>
+    </subsection>
+
+    <subsection title="Web">
+      <item>Technologies : <dfn>Javascript (ES5/ES6), HTML5, CSS3, JSON, XUL, RSS, WebRTC</dfn></item>
+      <item>Frameworks : <dfn>AngularJS, PolymerJS, jQuery, Handlerbars, Dojo, Bootstrap...</dfn></item>
+      <item>Packaging et tests : <dfn>npm, bower, gulp, grunt, mocha, chai, standardjs</dfn></item>
+      <item>Serveurs : <dfn>Nginx, Apache, ExpressJS, Django, Tiny HTTP</dfn></item>
+      <item>APIs : <dfn>Paybox, Twitter, Facebook, Instagram, Google APIs</dfn></item>
+      <item>Navigateurs : applications et extensions pour <dfn>Firefox</dfn> et <dfn>Chrome</dfn></item>
+    </subsection>
+
+    <subsection title="Réseau et plateformes">
+      <item>Infrastructure : <dfn>routage, sous-réseaux, mapping, VLAN, WiFi, Load Balancer</dfn></item>
+      <item>Services : <dfn>DHCP, Proxy, Reverse-proxy, NAS, NFS, Samba, SSHFS, SSH, VPN</dfn></item>
+      <item>Protocoles : <dfn>IP, DNS, HTTP, SSL/TLS, DASH, HLS, Websocket, Ethernet, MOST</dfn></item>
+      <item>Cloud : <dfn>Google Cloud Platform, OVH Cloud</dfn></item>
+    </subsection>
+
+    <subsection title="Langues" class="table">
+      <item>Anglais (courant, TOEIC 905)</item>
+      <item>Italien (expérimenté, emploi en Italie)</item>
+      <item>Espagnol (expérimenté, études en Espagne)</item>
+      <item>Allemand (débutant, stage en Allemagne)</item>
+    </subsection>
+  </section>
+
+  <section title="Loisirs">
+    <item>Voyager : j’ai participé à des rencontres interculturelles de 2006 à 2009 (Bretagne, Bosnie-Herzégovine, Serbie, Allemagne). Voyages en inter-rail en Europe de l’Est. Je suis membre actif du site <a href="https://www.couchsurfing.com/people/clementdesiles">CouchSurfing</a>.</item>
+    <item>Musique : passionné de concerts et de festivals de musique, je joue du piano depuis mes 6 ans, de la flûte irlandaise et j’apprends le violon.</item>
+    <item>Divers : je pratique l’ultimate frisbee en club, et suis amateur d’escalade et de kayak. J’adore cuisiner de (délicieuses) lasagnes open source.</item>
+  </section>
+</cv>

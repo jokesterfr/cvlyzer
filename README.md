@@ -65,6 +65,6 @@ Thanks to Jason Blevins &lt;jrblevin@sdf.lonestar.org&gt; for his [LaTeX templat
 
 Extra emojis come from https://github.com/mozilla/fxemoji, and are licensed under Apache License version 2.0.
 
-## Licence
+## Licencing
 
-GNU GPL V2 applies here, see LICENCE file.
+GNU GPL V2 applies to this software, see [LICENCE](./LICENCSE-gnu-gpl-v2) file, my resume content, homepage and pictures are credited under [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).

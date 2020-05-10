@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "cv.dtd">
+<?xml-stylesheet type="text/xsl" href="../xsl/cv2html5.xsl"?>
+
+<cv lang="fr" suffix="_clement_desiles_2020">
+  <contact title="Contact">
+    <name title="Name">Clément Désiles</name>
+    <title>Ingénieur avant-vente &amp; Lead dev</title>
+    <info>31 ans – permis de conduire B</info>
+    <phone>+33 6 58 12 45 61</phone>
+    <email>clementdesilesfr@gmail.com</email>
+    <homepage>https://clementdesiles.fr</homepage>
+    <photo width="128">img/photo.png</photo>
+    <keywords>Clément, Désiles, curriculum vitae, resume, presales, lead dev, fullstack, Node.js, Linux, CI, CD, Docker, Ansible</keywords>
+  </contact>
+
+  <section title="Expérience">
+    <subsection title="Ingénieur avant-vente, Hoppen (ex. Télécom Santé), Rennes" date="depuis juin 2016 – 4 ans">
+      <item>Avant-vente : soutenance et réponse à appels d'offres (publics et privés), réalisation de kits de démonstration, showrooms, chambres témoin et devis.</item>
+      <item>Export : Key Account Manager de déploiements et démos, accompagnement des ventes internationales (Europe, Grande-Bretagne, Moyen-Orient), coorganisation et paticipation aux plus importants salons mondiaux (ex: Arab Health).</item>
+      <item>Lead dev : en charge d'améliorer la qualité et la productivité, structuration des outils et pratiques d'une équipe technique en forte croissance. Hoppen compte plus de 300 employés en 2020.</item>
+      <item>Interconnexion : avec des dossiers médicaux, radiographies, commande de repas, facturation, <dfn>GMAO</dfn>, <dfn>SSO</dfn>, domotique (<dfn>Siemens</dfn>, <dfn>KNX</dfn>).</item>
+      <item>Sécurité : analyse de risque, hardening, audit, veille, expérience avec des systèmes de paiement et d’authentification.</item>
+      <item>Handicap : responsable du budget, de la conception et de l'exploitation d'un prototype d'IHM à destination de personnes handicapées (contacteur sec, balayage au souffle, contrôle rétinien).</item>
+    </subsection>
+    <subsection title="VIE Architecte développeur, Revevol, Milan" date="mai 2015 à mai 2016 – 1 an">
+      <item>Conception et devops de l'intranet de Lafarge-Holcim avec une application <dfn>Google App Engine</dfn>. 60 000 utilisateurs.</item>
+      <item>Migration des archives d'Air Liquide dans le cloud : développement d'application web distribuée (US / Europe) sharding <dfn>MongoDB</dfn> dans la <dfn>GCP</dfn>.</item>
+      <item>Maintenance d'un outil <dfn>Google Apps for Work</dfn> pour contrôler les accès de 30 000 smartphones chez Solvay.</item>
+    </subsection>
+    <subsection title="Lead dev, Télécom Santé, Rennes" date="septembre 2012 à avril 2015 – 3 ans et 6 mois">
+      <item>Développeur full stack : évolutions et corrections d'un produit à base de micro-services Web.</item>
+      <item>Management : coordination de projet, formation et suivi, élaboration de stratégies de migration de code legacy.</item>
+      <item>Processus et qualité : fort investissement dans les spécifications, l'intégration des systèmes, les tests et le packaging.</item>
+      <item>Systèmes embarqués : expérience des drivers <dfn>Linux</dfn> (ex: écrans tactiles), de reverse engineering, et d'écriture de bindings <dfn>C/C++</dfn> pour d'autres langages (ex: <dfn>Node.js</dfn>).</item>
+    </subsection>
+    <subsection title="Stage ingénieur, Télécom Santé, Rennes" date="de février 2012 à août 2012 – 6 mois">
+      <item>Au sein d'une jeune startup (2 fondateurs, un dev senior et moi-même), conception du produit phare de la société : une tablette tactile à destination des patients hospitalisés. Technologies Web (<dfn>JavaScript</dfn>, <dfn>Node.js</dfn>), <dfn>Linux</dfn>.</item>
+    </subsection>
+    <subsection title="Auto-entrepreneur, développement logiciel" date="de septembre 2011 à août 2012 – 1 an">
+      <item>Réalisation d’une plate-forme <dfn>e-Commerce</dfn> pour un client basé à Londres.</item>
+    </subsection>
+    <subsection title="Stage, Telemotive, Munich" date="de juin 2010 à décembre 2010 – 6 mois">
+      <item>Au coeur de l'industrie automobile, développement de services <dfn>UPnP</dfn> sur des cartes embarquées <dfn>Linux</dfn> / <dfn>PowerPC</dfn>. Études d'encapsulation de trames <dfn>Ethernet</dfn> dans un réseau fibre optique <dfn>MOST</dfn>. Analyse de performances (<dfn>Python</dfn>).</item>
+    </subsection>
+    <subsection title="Assistant Webmaster, PMB Services" date="de juin 2007 à juin 2010 – 3 ans">
+      <item>Contributions à un Système Intégré de Gestion de Bibliothèque (<dfn>SIGB</dfn>) en <dfn>PHP/MySQL</dfn>. <dfn>UI/UX</dfn> design pour les clients, réalisation du site internet de l'entreprise avec le framework <dfn>SPIP</dfn>.</item>
+    </subsection>
+  </section>
+
+  <section title="Formation">
+    <subsection title="Diplôme d’ingénieur, grade de Master" date="2007–2012">
+      <item>Ecole Nationale d’Ingénieurs de Brest (<a href="https://www.enib.fr">ENIB</a>), France</item>
+    </subsection>
+    <subsection title="Semestre de mobilité à l’étranger" date="2012">
+      <item>Université de Cadix (<a href="https://www.uca.es">UCA</a>), Espagne</item>
+    </subsection>
+  </section>
+
+  <section title="Compétences">
+
+    <subsection title="Avant-vente">
+      <item>Très bonnes aptitudes en communication orale et écrite, capacité à présenter des sujets complexes à des interlocuteurs techniques et non-techniques.</item>
+      <item>Flexible et capable de rapidement prendre la main sur de nouveaux produits ou technologies.</item>
+      <item>Connaissance détaillée des specifications clefs du produit, de leurs critères de performance et d'application.</item>
+      <item>Excellentes compétences à la résolution de problèmes; capacité à imaginer et concevoir au delà des pratiques habituelles et de la vision du client.</item>
+      <item>Bonne approche commerciale, habileté à prendre des décisions et réaliser du chiffrage.</item>
+    </subsection>
+
+    <subsection title="Informatique / IT">
+      <item>Programmation : <dfn>Node.js, Python, C, C++, bash</dfn></item>
+      <item>Administration système : <dfn>Ubuntu, Archlinux, LFS, Ansible, systemd</dfn></item>
+      <item>Bases de données : relationelles (<dfn>MySQL, PostgreSQL</dfn>), orientées document (<dfn>MongoDB, Google Cloud Datastore</dfn>), orientées colonnes (<dfn>BigQuery</dfn>)</item>
+      <item>Virtualisation: <dfn>VMWare/VSphere, VitualBox, QEMU</dfn></item>
+      <item>Gestion de versions : expérience avancée de <dfn>GIT</dfn> et de <dfn>CI/CD</dfn> (ex: <dfn>docker, npm, artifactory, gitlab runners</dfn>)</item>
+    </subsection>
+
+    <subsection title="Web">
+      <item>Principales technologies: <dfn>Javascript ES6, HTML5, CSS3, WebSocket, WebRTC</dfn></item>
+      <item>Frameworks: <dfn>ExpressJS, VueJS, AngularJS, PolymerJS</dfn></item>
+    </subsection>
+
+    <subsection title="Réseau et services">
+      <item>Réseau: <dfn>VLAN, Wi-Fi, routing, DHCP, SSH, VPN, proxy, firewalls, wireshark</dfn></item>
+      <item>Système: administration (ex: <dfn>Ubuntu, Archlinux, LFS</dfn>), provisioning (ex: <dfn>Ansible, systemd</dfn>)</item>
+      <item>Services: <dfn>DHCP, proxy, reverse-proxy, SSH, VPN</dfn></item>
+      <item>Web: <dfn>HTTP, SSL/TLS, DNS, reverse-proxy, sharding, load-balancer (ex: Nginx)</dfn></item>
+      <item>Expérience Cloud: <dfn>Google Cloud Platform</dfn> (cours chez <dfn>SFEIR</dfn>), <dfn>OVH Cloud, Microsoft Azure</dfn></item>
+    </subsection>
+
+    <subsection title="Langues" class="table">
+      <item>Anglais : courant (TOEIC 905, multiples voyages d'affaires)</item>
+      <item>Espagnol : intermédiaire (études en Espagne)</item>
+      <item>Italien : courant (emploi en Italie)</item>
+      <item>Allemand : débutant (stage en Allemagne)</item>
+    </subsection>
+  </section>
+
+  <section title="Loisirs">
+    <item>🧳 rencontres interculturelles (Bretagne, Bosnie-Herzégovine, Serbie, Allemagne), voyages en inter-rail, membre actif de la communauté <a href="https://www.couchsurfing.com/people/clementdesiles">CouchSurfing</a>.</item>
+    <item>🎵 passionné de concerts et de festivals de musique, je joue du piano depuis mes 6 ans, de la flûte irlandaise et j’apprends le violon.</item>
+    <item>🧗 je pratique l’ultimate frisbee, et suis amateur d’escalade et de kayak. J’adore cuisiner de (délicieuses) lasagnes open source.</item>
+  </section>
+</cv>

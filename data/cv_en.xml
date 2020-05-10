@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv SYSTEM "cv.dtd">
+<?xml-stylesheet type="text/xsl" href="../xsl/cv2html5.xsl"?>
+
+<cv lang="en" suffix="_clement_desiles_2020">
+  <contact title="Contact">
+    <name title="Name">Clément Désiles</name>
+    <title>Presales engineer &amp; Lead developer</title>
+    <info>31 years old</info>
+    <phone>+33 6 58 12 45 61</phone>
+    <email>clementdesilesfr@gmail.com</email>
+    <homepage>https://clementdesiles.fr</homepage>
+    <photo width="128">img/photo.png</photo>
+    <keywords>Clément, Désiles, curriculum vitae, resume, presales, lead dev, fullstack, Node.js, Linux, CI, CD, Docker, Ansible</keywords>
+  </contact>
+
+  <section title="Experience">
+    <subsection title="Presales engineer, Hoppen (ex. Télécom Santé), Rennes (France)" date="since June 2016 – 4 years">
+      <item>Presales: call for tenders (public, private), design and setup of demo kits, showrooms, witness rooms, and costings.</item>
+      <item>Export: Key Account Manager of deployments and demos, engineering technical officer of international sales (Europe, UK, Middle East), co-organization and participation to top international exhibitions (ex: Arab Health).</item>
+      <item>Lead dev: on a mission to increase quality and productivity, structuring tools and practices of our growing technical teams. Hoppen counts 300+ employees by 2020.</item>
+      <item>Interoperability with: medical records, medical imaging, meal ordering, invoicing, <dfn>CMMS</dfn>, <dfn>SSO</dfn>, and home automation (<dfn>Siemens</dfn>, <dfn>KNX</dfn>).</item>
+      <item>Security: risk assessment, hardening, audit and monitoring, experience with payment and authentication systems.</item>
+      <item>Accessibility: responsible from R&amp;D budget estimation to protoype deployment of an HMI dedicated to disabled people. Telethesis, eye tracking, and communication apps.</item>
+    </subsection>
+    <subsection title="Software architect, Revevol, Milan (Italy)" date="May 2015 to May 2016 – 1 year">
+      <item>Design and devops of a <dfn>Google App Engine</dfn> application for the Lafarge-Holcim (global leader in building materials) intranet. 60,000 users.</item>
+      <item>Air Liquide's datacenter archives migration to the cloud: design of a distributed web app (US/Europe) with <dfn>MongoDB shards</dfn>, hosted on the <dfn>GCP</dfn>.</item>
+      <item>Maintenance of an IAM <dfn>Google Apps for Work</dfn> tool to manage Solvay's (chemicals company) 30,000 devices.</item>
+    </subsection>
+    <subsection title="Lead developer, Télécom Santé, Rennes (France)" date="September 2012 to April 2015 – 3 years and 6 months">
+      <item>Full stack development: micro-services platform for healthcare institutions. Webapps with responsive design and <dfn>i18n</dfn>.</item>
+      <item>Management: project coordination, training and skills transfer, legacy code migration strategy.</item>
+      <item>Process and quality: strong involvment in specifications, system integration, tests, and packaging.</item>
+      <item>Embeded systems: experience with <dfn>Linux</dfn> drivers (ex: touchscreen), <dfn>C/C++</dfn> bindings to other languages (ex: <dfn>Node.js</dfn>).</item>
+    </subsection>
+    <subsection title="Engineer internship, Télécom Santé, Rennes (France)" date="February 2012 to August 2012 – 6 months">
+      <item>At the very begining of a promising startup (2 founders, one senior developer and me), design of the flagship product: a touchscreen device dedicated to patients in hospitals. Web technologies (<dfn>JavaScript</dfn>, <dfn>Node.js</dfn>), <dfn>Linux</dfn> and open source ecosystem.</item>
+    </subsection>
+    <subsection title="Freelance, software development" date="September 2011 to August 2012 – 1 year">
+      <item>Development of an e-commerce platform for a company based in the UK.</item>
+    </subsection>
+    <subsection title="Internship, Telemotive, Munich (Germany)" date="June 2010 to December 2010 – 6 months">
+      <item>At the heart of the automotive industry, development of <dfn>UPnP</dfn> services on an embeded <dfn>Linux/PowerPC</dfn> data logger solution. Research of <dfn>ethernet</dfn> frames encapsulation within a <dfn>MOST</dfn> network (optic fiber). Performance analysis with <dfn>Python</dfn>.</item>
+    </subsection>
+    <subsection title="Webmaster Assistant, PMB Services" date="June 2007 to June 2010 – 3 years">
+      <item>Contributions to an integrated library system (<dfn>ILS</dfn>) in <dfn>PHP/MySQL</dfn>, UI/UX design for customers portals, development of the company's website with the <dfn>SPIP</dfn> framework. Student job.</item>
+    </subsection>
+  </section>
+
+  <section title="Skills">
+
+    <subsection title="Presales">
+      <item>Strong written and oral communications skills with the ability to present complex topics to technical and non-technical audiences.</item>
+      <item>Flexible, dependable, and capable of quickly learning new products and technologies.</item>
+      <item>Detailed knowledge of relevant product line specifications, performance criteria and applications.</item>
+      <item>Excellent problem solving skills; ability to push creative thinking beyond the boundaries of existing industry practices and client mindsets.</item>
+      <item>Ability to build strong relationships with internal and external stakeholders.</item>
+      <item>Good business judgment, ability to make decisions and quotations.</item>
+    </subsection>
+
+    <subsection title="Computer science / IT">
+      <item>Programming: <dfn>Node.js, Python, C, C++, bash</dfn></item>
+      <item>Databases: <dfn>relational (MySQL, PostgreSQL), document stores (MongoDB, Google Cloud Datastore), columnar (BigQuery)</dfn></item>
+      <item>Virtualization: <dfn>VMWare/VSphere, VitualBox, QEMU</dfn></item>
+      <item>Revision control: advanced experience with <dfn>Git</dfn>, version and release management (ex: <dfn>docker, npm, artifactory, gitlab runners</dfn>)</item>
+    </subsection>
+
+    <subsection title="Web">
+      <item>Core technologies: <dfn>Javascript ES6, HTML5, CSS3, WebSocket, WebRTC</dfn></item>
+      <item>Frameworks: <dfn>ExpressJS, VueJS, AngularJS, PolymerJS</dfn></item>
+    </subsection>
+
+    <subsection title="Networks and services">
+      <item>Networks: <dfn>VLAN, Wi-Fi, routing, DHCP, SSH, VPN, proxy, firewalls, wireshark</dfn></item>
+      <item>System: administration (ex: <dfn>Ubuntu, Archlinux, LFS</dfn>), provisioning (ex: <dfn>Ansible, systemd</dfn>)</item>
+      <item>Services: <dfn>DHCP, proxy, reverse-proxy, SSH, VPN</dfn></item>
+      <item>Web: <dfn>HTTP, SSL/TLS, DNS, reverse-proxy, sharding, load-balancer (ex: Nginx)</dfn></item>
+      <item>Cloud experience: <dfn>Google Cloud Platform</dfn> (<dfn>SFEIR</dfn> training), <dfn>OVH Cloud, Microsoft Azure</dfn></item>
+    </subsection>
+
+    <subsection title="Languages" class="table">
+      <item>French: native</item>
+      <item>Spanish: intermediate, student mobility in Spain</item>
+      <item>English: fluent (TOEIC 905), multiple business trips abroad</item>
+      <item>German: basic, internship in Germany</item>
+      <item>Italian: fluent, work experience in Italy</item>
+    </subsection>
+  </section>
+
+  <section title="Education">
+    <subsection title="Master’s degree, engineering degree" date="2007–2012">
+      <item>Top French engineering school of Brest (<a href="https://www.enib.fr">ENIB</a>), France</item>
+    </subsection>
+    <subsection title="Student mobility" date="2012">
+      <item>University of Cadiz (<a href="http://www.uca.es/">UCA</a>), Spain</item>
+    </subsection>
+  </section>
+
+  <section title="Hobbies">
+    <item>🧳 I've participated in intercultural workcamps (Brittany, Bosnia-Herzegovina, Serbia, Germany), I did multiple inter-rail travels and I'm an active member of the CouchSurfing community.</item>
+    <item>🎵 I play the piano since the age of 6, and the irish tin whistle. I'm now learning the violin.</item>
+    <item>🧗 I practice ultimate frisbee, I also do kayak and rock climbing. I love to cook (delicious) open-source lasagna.</item>
+  </section>
+</cv>

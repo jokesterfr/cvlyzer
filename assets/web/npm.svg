@@ -1,8 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="540px" height="210px" viewBox="0 0 18 7">
-<path fill="#CB3837" d="M0,0h18v6H9v1H5V6H0V0z M1,5h2V2h1v3h1V1H1V5z M6,1v5h2V5h2V1H6z M8,2h1v2H8V2z M11,1v4h2V2h1v3h1V2h1v3h1V1H11z"/>
-<polygon fill="#FFFFFF" points="1,5 3,5 3,2 4,2 4,5 5,5 5,1 1,1 "/>
-<path fill="#FFFFFF" d="M6,1v5h2V5h2V1H6z M9,4H8V2h1V4z"/>
-<polygon fill="#FFFFFF" points="11,1 11,5 13,5 13,2 14,2 14,5 15,5 15,2 16,2 16,5 17,5 17,1 "/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   width="64"
+   height="24.888887"
+   viewBox="0 0 2.1333333 0.82962958"
+   id="svg872"
+   sodipodi:docname="npm.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata878">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs876" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1329"
+     inkscape:window-height="744"
+     id="namedview874"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.78148148"
+     inkscape:cx="349.17936"
+     inkscape:cy="25.653583"
+     inkscape:window-x="37"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg872" />
+  <path
+     d="M 0,0 H 2.1333333 V 0.7111111 H 1.0666667 V 0.8296296 H 0.59259259 V 0.7111111 H 0 Z M 0.11851852,0.5925926 H 0.35555556 V 0.237037 H 0.47407407 V 0.5925926 H 0.59259259 V 0.1185185 H 0.11851852 Z M 0.71111111,0.1185185 V 0.7111111 H 0.94814815 V 0.5925926 H 1.1851852 V 0.1185185 Z M 0.94814815,0.237037 H 1.0666667 V 0.474074 H 0.94814815 Z M 1.3037037,0.1185185 v 0.4740741 h 0.237037 V 0.237037 H 1.6592593 V 0.5925926 H 1.7777778 V 0.237037 H 1.8962963 V 0.5925926 H 2.0148148 V 0.1185185 Z"
+     id="path864"
+     inkscape:connector-curvature="0"
+     style="fill:#cb3837;stroke-width:0.11851852" />
+  <polygon
+     points="1,1 1,5 3,5 3,2 4,2 4,5 5,5 5,1 "
+     id="polygon866"
+     style="fill:#ffffff"
+     transform="scale(0.11851852)" />
+  <path
+     d="M 0.71111111,0.1185185 V 0.7111111 H 0.94814815 V 0.5925926 H 1.1851852 V 0.1185185 Z M 1.0666667,0.474074 H 0.94814815 V 0.237037 H 1.0666667 Z"
+     id="path868"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff;stroke-width:0.11851852" />
+  <polygon
+     points="15,2 16,2 16,5 17,5 17,1 11,1 11,5 13,5 13,2 14,2 14,5 15,5 "
+     id="polygon870"
+     style="fill:#ffffff"
+     transform="scale(0.11851852)" />
 </svg>

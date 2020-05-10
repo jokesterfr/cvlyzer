@@ -4,3 +4,6 @@ node_modules/
 notes/
 *.log
 *.pdf_tex
+
+# copyrighted svg file
+assets/web/email.svg
