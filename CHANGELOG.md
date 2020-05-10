@@ -2,6 +2,7 @@
 
 ## Upcoming changes
 
+* [FIX] Optimize page speed and overall notes
 * [FEA] Add nyan cat easter egg
 * [FIX] Fix CSS in resume web pages background
 * [FIX] Fix resume data accordingly to the last reviews (thx guys)

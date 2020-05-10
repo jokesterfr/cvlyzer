@@ -32,6 +32,7 @@ GIT=git
 LATEX=xelatex
 XSLT=xsltproc
 INKSCAPE=inkscape
+IM=convert
 
 AUTHOR=clement_desiles
 YEAR=`date +%Y`
@@ -86,6 +87,7 @@ $(DIST_WEB):
 update: dist
 	$(CP) $(CSS) $(IMG) $(DIST_WEB)
 	$(CP) $(WEB_ASSETS)/* $(DIST_WEB)/img/
+	$(IM) -quality 100 -resize 128x128 $(DIST_WEB)/img/photo.png $(DIST_WEB)/img/photo.png
 	$(CP) $(ICONS) $(DIST_WEB)
 	$(CP) vcard.vcf $(DIST_WEB)
 	$(CP) index.html $(DIST_WEB)
