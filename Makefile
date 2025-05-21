@@ -1,5 +1,5 @@
 #
-#    cvlyzer - Copyright (C) 2015 - Clément Désiles <main@jokester.fr>
+#    cvlyzer - Copyright (C) 2015-2025 - Clément Désiles <main@jokester.fr>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
