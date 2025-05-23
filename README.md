@@ -1,6 +1,11 @@
 # CVlyzer
 
-> **DISCLAIMER**: this project is archived. It was fun, but the perfect opposite of what could be called a KISS software 😅. Limiting the end result was not worse the journey of using old techs for fun. Finally a much better approach nowadays is to develop the web pages and export-to-pdf with a web browser. Simple as that. Feel free to reach my [porfolio project](https://github.com/jokesterfr/portfolio) or my website: https://clementdesiles.fr
+> **DISCLAIMER**: This project is now **archived**. It used to be fun, but it is the exact opposite of what could be called KISS software 😅.
+>
+> The result didn’t justify the journey of using old techs just for fun. Nowadays, a much better approach is to develop web pages and export them to PDF using a browser — simple as that.
+>  
+> Feel free to check out my [portfolio project](https://github.com/jokesterfr/portfolio) or visit my website: https://clementdesiles.fr
+
 
 Generates your CV as a PDF and Web page out of a simple XML.
 
