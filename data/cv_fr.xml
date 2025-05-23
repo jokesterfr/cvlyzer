@@ -5,17 +5,43 @@
 <cv lang="fr" suffix="_clement_desiles_2020">
   <contact title="Contact">
     <name title="Name">Clément Désiles</name>
-    <title>Ingénieur avant-vente &amp; Lead dev</title>
-    <info>31 ans – permis de conduire B</info>
+    <title>Engineering manager</title>
+    <info>36 ans – permis de conduire B</info>
     <phone>+33 6 58 12 45 61</phone>
-    <email>jobs@jokester.fr</email>
+    <email>jobs@clementdesiles.fr</email>
     <homepage>https://clementdesiles.fr</homepage>
     <photo width="128">img/photo.png</photo>
-    <keywords>Clément, Désiles, curriculum vitae, resume, presales, lead dev, fullstack, Node.js, Linux, CI, CD, Docker, Ansible</keywords>
+    <keywords>Clément, Désiles, curriculum vitae, resume, engineering manager, lead dev, fullstack, Node.js, Linux, CI, CD, Docker, Ansible</keywords>
   </contact>
 
   <section title="Expérience">
-    <subsection title="Ingénieur avant-vente, Hoppen (ex. Télécom Santé), Rennes" date="depuis juin 2016 – 4 ans">
+    <subsection title="Senior developer, Fairly, full-remote" date="depuis mars 2025">
+      <item>
+      Dans une entreprise de l'économie sociale et solidaire, je suis en charge de l'organisation de la roadmap, de la maturation des tâches. Je réalise autant d'opérations variées :
+* operations : CI/CD, Ops, linting, monitoring
+* scrum mastering : configuration de Jira, ticketing, reporting
+* développement : exports de données, build, développement.
+      </item>
+      <item> Skills: TypeScript, PostGreSQL, Github actions, React, Vite, Docker.</item>
+    </subsection>
+    <subsection title="Engineering manager, PrestaShop, full-remote" date="août 2022 à février 2025 – 2 ans et 8 mois">
+      <item>Au sein de tribe Data, je dirige deux équipes : Accounts et CloudSync.
+Je suis responsable de la stabilité et des processus de livraison de ces deux produits, en collaboration quotidienne avec différents profils : Produit, Design, QA, Ops, Support.
+
+Pour construire efficacement des logiciels, mes équipes et moi adoptons une approche spec-first, en nous appuyant sur EventModeling et des définitions OpenAPI afin de contraindre les types et le code. Nous utilisons EventSourcing pour améliorer l’observabilité des microservices et faciliter le passage à l’échelle verticale.
+
+Un effort important a récemment été consacré aux tests : tests unitaires, tests end-to-end de l’application, tests d’intégration, utilisation de mocks et stubs.
+Sur mon temps libre, je développe également un outil de test open source (PrestaShop Flashlight).
+Fournir les meilleurs outils à mes équipes fait partie de ma démarche Lean.</item>
+      <item>Skills: Team Management · Software Engineering · EventSourcing · Github Action · Google Cloud Platform</item>
+    </subsection>
+    <subsection title="Senior developer, PrestaShop, full-remote" date="juillet 2020 à juillet 2022 – 2 ans">
+      <item>Conception et maintenance (DevOps) de solutions back-end réactives et évolutives. Cette plateforme synchronise les données des boutiques avec un écosystème plus vaste, permettant aux extensions d’être plus polyvalentes et efficaces.</item>
+      <item>Direction du développement d’une nouvelle plateforme évolutive et sécurisée pour le marché français de la santé.</item>
+      <item>Modélisation et planification d’événements au sein d’une équipe agile formidable !</item>
+      <item>Skills: Google Cloud SQL · TypeScript · Software Engineering · Node.js · NestJS</item>
+    </subsection>
+    <subsection title="Ingénieur avant-vente, Hoppen (ex. Télécom Santé), Rennes" date="juin 2016 à juillet 2020 – 4 ans et 2 mois">
       <item>Avant-vente : soutenance et réponse à appels d'offres (publics et privés), réalisation de kits de démonstration, showrooms, chambres témoin et devis.</item>
       <item>Export : Key Account Manager de déploiements et démos, accompagnement des ventes internationales (Europe, Grande-Bretagne, Moyen-Orient), coorganisation et paticipation aux plus importants salons mondiaux (ex: Arab Health).</item>
       <item>Lead dev : en charge d'améliorer la qualité et la productivité, structuration des outils et pratiques d'une équipe technique en forte croissance. Hoppen compte plus de 300 employés en 2020.</item>
@@ -28,7 +54,7 @@
       <item>Migration des archives d'Air Liquide dans le cloud : développement d'application web distribuée (US / Europe) sharding <dfn>MongoDB</dfn> dans la <dfn>GCP</dfn>.</item>
       <item>Maintenance d'un outil <dfn>Google Apps for Work</dfn> pour contrôler les accès de 30 000 smartphones chez Solvay.</item>
     </subsection>
-    <subsection title="Lead dev, Télécom Santé, Rennes" date="septembre 2012 à avril 2015 – 3 ans et 6 mois">
+    <subsection title="Développeur full-stack, Télécom Santé, Rennes" date="septembre 2012 à avril 2015 – 3 ans et 6 mois">
       <item>Développeur full stack : évolutions et corrections d'un produit à base de micro-services Web.</item>
       <item>Management : coordination de projet, formation et suivi, élaboration de stratégies de migration de code legacy.</item>
       <item>Processus et qualité : fort investissement dans les spécifications, l'intégration des systèmes, les tests et le packaging.</item>
@@ -58,16 +84,7 @@
   </section>
 
   <section title="Compétences">
-
-    <subsection title="Avant-vente">
-      <item>Très bonnes aptitudes en communication orale et écrite, capacité à présenter des sujets complexes à des interlocuteurs techniques et non-techniques.</item>
-      <item>Flexible et capable de rapidement prendre la main sur de nouveaux produits ou technologies.</item>
-      <item>Connaissance détaillée des specifications clefs du produit, de leurs critères de performance et d'application.</item>
-      <item>Excellentes compétences à la résolution de problèmes; capacité à imaginer et concevoir au delà des pratiques habituelles et de la vision du client.</item>
-      <item>Bonne approche commerciale, habileté à prendre des décisions et réaliser du chiffrage.</item>
-    </subsection>
-
-    <subsection title="Informatique / IT">
+    <subsection title="Développement logiciel">
       <item>Programmation : <dfn>Node.js, Python, C, C++, bash</dfn></item>
       <item>Administration système : <dfn>Ubuntu, Archlinux, LFS, Ansible, systemd</dfn></item>
       <item>Bases de données : relationelles (<dfn>MySQL, PostgreSQL</dfn>), orientées document (<dfn>MongoDB, Google Cloud Datastore</dfn>), orientées colonnes (<dfn>BigQuery</dfn>)</item>
@@ -97,8 +114,7 @@
   </section>
 
   <section title="Loisirs">
-    <item>🧳 rencontres interculturelles (Bretagne, Bosnie-Herzégovine, Serbie, Allemagne), voyages en inter-rail, membre actif de la communauté <a href="https://www.couchsurfing.com/people/clementdesiles">CouchSurfing</a>.</item>
-    <item>🎵 passionné de concerts et de festivals de musique, je joue du piano depuis mes 6 ans, de la flûte irlandaise et j’apprends le violon.</item>
-    <item>🧗 je pratique l’ultimate frisbee, et suis amateur d’escalade et de kayak. J’adore cuisiner de (délicieuses) lasagnes open source.</item>
+    <item>🧗 je pratique de l'escalade en club, et de la photographie animalière amateur. Depuis peu je participe au programme de conservation de la Chouette Chevêche en Alsace.</item>
+    <item>J’adore cuisiner, en particulier de (délicieuses) lasagnes open source.</item>
   </section>
 </cv>

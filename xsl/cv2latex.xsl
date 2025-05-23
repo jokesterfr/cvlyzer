@@ -15,7 +15,7 @@
     % this notice and the above URL in the source code if you choose to
     % redistribute this file.
     %
-    % Copyright (C) 2012-2020 Clément Désiles &lt;jobs@jokester.fr&gt;
+    % Copyright (C) 2012-2020 Clément Désiles &lt;jobs@clementdesiles.fr&gt;
     % https://github.com/jokesterfr/cvlyzer
     % For my rework licensed under MIT.
 

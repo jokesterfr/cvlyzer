@@ -1,10 +1,10 @@
 # CVlyzer
 
-Generates your CV out of simple XML syntax
+Generates your CV as a PDF and Web page out of a simple XML.
 
 ## Requirements
 
-This package has been sucessfully tested on a Debian/Ubuntu Linux OS, everything should work fine assuming you installed these libraries:
+This package has been sucessfully tested on a Debian system, everything should work fine assuming you installed these dependencies:
 
 ```
 # latex
@@ -18,9 +18,10 @@ apt install xsltproc
 
 # inkscape
 apt install inkscape
-```
 
-node >= v6
+# Node.js
+apt install nodejs
+```
 
 ## Build
 
@@ -32,9 +33,11 @@ npm install
 
 A very simple `Makefile` is provided, modify the sources under `./src` and do:
 
-	make
+```
+make
+```
 
-Magic happens, in your `./dest` file a surprise is waiting for you.
+You will then find your documents under `./dist`.
 
 ## Tidy HTML5
 
@@ -42,12 +45,12 @@ You need a recent version of tidy html5
 
 On ubuntu <= 16.05 
 ```sh
-sudo add-apt-repository ppa:jonathonf/backports
-sudo apt update
-sudo apt-install tidy
+add-apt-repository ppa:jonathonf/backports
+apt update
+apt-install tidy
 ```
 
-Check that:
+Check:
 
 ```sh
 $ tidy -v
@@ -67,4 +70,4 @@ Extra emojis come from https://github.com/mozilla/fxemoji, and are licensed unde
 
 ## Licencing
 
-GNU GPL V2 applies to this software, see [LICENCE](./LICENCSE-gnu-gpl-v2) file, my resume content, homepage and pictures are credited under [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
+See [LICENCE](./LICENCSE.txt), my own resume content, homepage and pictures are credited under [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).

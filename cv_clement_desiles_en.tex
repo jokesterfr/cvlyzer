@@ -1,0 +1,62 @@
+
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\geometry{margin=2cm}
+\pagestyle{empty}
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+\definecolor{main}{RGB}{33, 37, 41}
+\definecolor{accent}{RGB}{108, 117, 125}
+
+\newcommand{\sectiontitle}[1]{\vspace{1.2em}\textbf{\Large #1}\vspace{0.5em}\\}
+\newcommand{\job}[3]{\textbf{#1} -- #2\\\textit{#3}\\}
+\newcommand{\skill}[1]{\textbf{#1}}
+
+\begin{document}
+\begin{center}
+    {\Huge \textbf{Clément Désiles}}\\
+    \vspace{0.2cm}
+    \href{mailto:jobs@clementdesiles.fr}{jobs@clementdesiles.fr} \textbullet{} +33 6 58 12 45 61 \textbullet{} \href{https://clementdesiles.fr}{clementdesiles.fr}
+\end{center}
+
+\sectiontitle{Objective}
+Engineer passionate about \textbf{software craftsmanship} and \textbf{technical leadership}, looking for a position as \textbf{Engineering Manager} to help teams reach both technical and human excellence.
+
+\sectiontitle{Professional Experience}
+
+\job{Engineering Manager – PrestaShop (Remote)}{Aug 2022 – Feb 2025}{2 yrs 8 mos}
+Managed two squads (Accounts & CloudSync). Spec-first approach, EventModeling, EventSourcing. Focus on testing (unit, e2e, integration). OSS tool: PrestaShop Flashlight. Stack: GCP, GitHub Actions.
+
+\job{Senior Developer – PrestaShop (Remote)}{Jul 2020 – Jul 2022}{2 yrs}
+Scalable backend development. Multi-store data sync. French healthcare platform. Stack: Node.js, NestJS, GCP.
+
+\job{Senior Developer – Fairly (Remote)}{Mar 2025 – present}{ongoing}
+Scrum mastering, monitoring, CI/CD. Stack: React, Vite, Docker, PostgreSQL.
+
+\job{Pre-Sales Engineer / Lead Dev – Hoppen}{2016 – 2020}{4 yrs}
+Enterprise pre-sales, healthcare system integration, accessibility, home automation, security.
+
+\sectiontitle{Education}
+\textbf{Engineering degree (ENIB)} -- 2007–2012\\
+International semester: \textit{University of Cadiz, Spain}
+
+\sectiontitle{Languages}
+English: fluent \textbullet{} Italian: fluent \textbullet{} Spanish: intermediate \textbullet{} German: beginner
+
+\sectiontitle{Key Skills}
+\begin{itemize}
+  \item \skill{Management}: coaching, delivery, roadmap planning
+  \item \skill{Methodologies}: Agile, TDD, EventSourcing, CI/CD
+  \item \skill{Tech}: Node.js, TypeScript, GCP, PostgreSQL
+  \item \skill{Ops}: Docker, Linux, Ansible, systemd
+\end{itemize}
+
+\sectiontitle{Interests}
+Wildlife photography, climbing, species conservation, open-source gastronomy.
+\end{document}
