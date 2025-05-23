@@ -1,0 +1,62 @@
+
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\geometry{margin=2cm}
+\pagestyle{empty}
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+\definecolor{main}{RGB}{33, 37, 41}
+\definecolor{accent}{RGB}{108, 117, 125}
+
+\newcommand{\sectiontitle}[1]{\vspace{1.2em}\textbf{\Large #1}\vspace{0.5em}\\}
+\newcommand{\job}[3]{\textbf{#1} -- #2\\\textit{#3}\\}
+\newcommand{\skill}[1]{\textbf{#1}}
+
+\begin{document}
+\begin{center}
+    {\Huge \textbf{Clément Désiles}}\\
+    \vspace{0.2cm}
+    \href{mailto:jobs@clementdesiles.fr}{jobs@clementdesiles.fr} \textbullet{} +33 6 58 12 45 61 \textbullet{} \href{https://clementdesiles.fr}{clementdesiles.fr}
+\end{center}
+
+\sectiontitle{Objectif}
+Ingénieur passionné par le \textbf{craft du logiciel} et le \textbf{leadership technique}, je recherche un poste d'\textbf{Engineering Manager} pour accompagner des équipes vers l’excellence technique et humaine.
+
+\sectiontitle{Expérience professionnelle}
+
+\job{Engineering Manager – PrestaShop (Remote)}{août 2022 – fév. 2025}{2 ans 8 mois}
+Management de deux squads (Accounts & CloudSync). Approche \textit{spec-first}, EventModeling, EventSourcing. Tests poussés (unitaires, e2e, intégration). Outil OSS : PrestaShop Flashlight. Stack : GCP, GitHub Actions.
+
+\job{Senior Developer – PrestaShop (Remote)}{juil. 2020 – juil. 2022}{2 ans}
+Développement backend scalable. Synchronisation multi-boutiques. Plateforme santé. Stack : Node.js, NestJS, GCP.
+
+\job{Senior Developer – Fairly (Remote)}{mars 2025 – aujourd'hui}{en cours}
+Scrum mastering, monitoring, CI/CD. Stack : React, Vite, Docker, PostgreSQL.
+
+\job{Ingénieur Avant-Vente / Lead Dev – Hoppen}{2016 – 2020}{4 ans}
+Avant-vente grands comptes, interopérabilité hospitalière, accessibilité, domotique, sécurité.
+
+\sectiontitle{Formation}
+\textbf{Diplôme d'ingénieur (ENIB)} -- 2007–2012\\
+Semestre à l'étranger : \textit{Université de Cadix, Espagne}
+
+\sectiontitle{Langues}
+Anglais : courant \textbullet{} Italien : courant \textbullet{} Espagnol : intermédiaire \textbullet{} Allemand : débutant
+
+\sectiontitle{Compétences clés}
+\begin{itemize}
+  \item \skill{Management} : coaching, delivery, roadmap
+  \item \skill{Méthodologies} : Agile, TDD, EventSourcing, CI/CD
+  \item \skill{Tech} : Node.js, TypeScript, GCP, PostgreSQL
+  \item \skill{Ops} : Docker, Linux, Ansible, systemd
+\end{itemize}
+
+\sectiontitle{Intérêts}
+Photographie animalière, escalade, conservation de la faune, gastronomie open source.
+\end{document}
